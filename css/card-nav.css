@@ -1,0 +1,161 @@
+﻿*{
+
+margin:0;padding:0; margin:auto;
+ -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+}
+
+.tab-bg{
+	float:left;
+	width:20%;
+	height:100%;
+	background-color: #F6F6F6;
+}
+
+li{
+
+border-top:1px solid #ddd;
+border-left:1px solid #ddd;
+border-right:1px solid #ddd;
+height:50px;
+line-height:50px;
+list-style:none;
+text-align:center;
+width:100%;
+
+}
+
+li:last-child{
+height:50px;border-right:1px solid #ddd;border-bottom:1px solid #ddd;
+}
+li.active {
+border-right:1px solid white;background:white;
+border-left:4px solid #107afd;background:white;
+text-decoration: none;
+color:#107afd;
+}
+li.normal {
+border-right:1px solid white;background:red;
+text-decoration: none;
+color:#999;
+}
+
+#tab a{
+	text-decoration:none;
+	color:#999;
+	display:block;
+}
+
+#tab.active a{
+	text-decoration:none;
+	color:#107afd;
+	display:block;
+}
+
+#grey-font{
+	text-decoration: none;
+	color:#999;
+}
+
+
+#tabnav{
+	float:left;
+	background:#F6F6F6;
+	width:100%;
+
+	/*height:85%;*/
+}
+
+.name-edit{
+	float:left;
+	width:20%;
+	border-right:1px solid #ddd;
+	text-align:center;
+	font-size:1.6em;
+	color:#999;
+	position: absolute;
+  	bottom: 0px;
+  	background-color: #00f;
+  }
+
+.edit-group{
+	font-size:13px;
+	text-align: center;
+}
+
+.edit-position{
+	height:70px;
+	width:100%;
+	position: absolute;
+  	bottom: 0px;
+  	margin:0 ;
+  	padding:0 ;
+  	text-align: center;
+  /*	border-right:1px solid #ddd;*/
+
+}
+
+#tab_content{
+
+float:left;
+width:80%;
+background:white;
+height:100%;
+overflow:hidden;
+border-top:1px solid #ddd;
+border-right:1px solid #ddd;
+border-bottom:1px solid #ddd;
+border-left:0px solid #ddd;
+/*background-color: #999;*/
+}
+
+#tab_content .content{
+
+padding: 0px;
+height:100%;
+/*background-color: #009;*/
+}
+
+.container{
+    padding-left:0;
+    padding-right: 0;
+    position: absolute;
+  	top: 0px;
+  	bottom: 0px;
+}
+
+.abc{
+	width:100%;
+	height:18px;
+	background-color: #F5F5F5;
+	font-size:11pt;
+	color:#666;
+	padding:0px 0 0 5px;
+}
+
+.name-item{
+	width:100%;
+	height:70px;
+	/*background-color: #1ff;*/
+	border-bottom:1px solid #eee;
+	border-top:1px solid #eee;
+	border-left:1px solid #eee;
+}
+
+.name-img{
+	padding:7px 2px 0 3px;
+	float:left;
+}
+
+.name-head{
+	padding:7px 0px 0 3px;
+	font-size: 13pt;
+	color:#000;
+}
+
+.name-job{
+	padding:12px 0 0 3px;
+	font-size: 10pt;
+	color:#666;
+}

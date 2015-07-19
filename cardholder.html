@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>名片夹</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <link rel="stylesheet" type="text/css" href="css/electronic_edit.css">
+  <link rel="stylesheet" type="text/css" href="css/icomoon.css">
+  <link rel="stylesheet" type="text/css" href="css/card-nav.css">
+</head>
+
+<body>
+	<div class="container">
+		<div class = "tab-bg">			
+			<ul id='tabnav'>
+			<li class='active' id="tab"><a  href="#a" >全部</a></li>
+			<li  id="tab"><a  href="#b" >重要</a></li>
+			<li id="tab"><a  href="#c"  >客户</a></li>
+			<li id="tab"><a href="#d"   >亲友</a></li>
+			<li  id="tab" ><a href="#e" >外卖</a></li>
+			</ul>
+
+			<div class = "name-edit">
+				<a href=""><div class = "edit-position">
+					<div><span class="icon-edit"></span></div>
+					<div class = "edit-group">编辑分组</div>
+				</div></a>
+			</div>
+		</div>
+		
+		<div id="tab_content">
+			<div id="a" class="content">
+				<div class = "abc">Y </div>
+				<a href="mycard.html"><div class = "name-item">
+					<div class="name-img"><img style="width:55px;height:55px" src="images/tairy1.jpg"></div>
+					<div class="name-head">Tairy</div>
+					<div class="name-job">东南大学|学生</div>
+				</div></a>
+				<div class = "name-item">
+					<div class="name-img"><img style="width:55px;height:55px" src="images/portrait.jpg"></div>
+					<div class="name-head">姓名示例</div>
+					<div class="name-job">公司|职位</div>
+				</div>
+			</div>
+			<div id="b" class="content">bbbbb  </div>
+			<div id="c" class="content">cccccc  </div>
+			<div id="d" class="content">dddd  </div>
+			<div id="e" class="content">eeee  </div>
+		</div> 
+	</div>  
+
+<script type="text/javascript">
+function changeStyle(){
+ this.onclick=function(){
+   var list=this.parentNode.childNodes;
+   for(var i=0;i<list.length;i++){
+        if(1==list[i].nodeType &&  'active'==list[i].className) {
+                list[i].className="";
+        }
+   }
+ this.className='active';
+ }
+
+
+}
+
+ var tabs=document.getElementById('tabnav').childNodes;
+ for(var i=0;i<tabs.length;i++){
+    if(1==tabs[i].nodeType){
+       changeStyle.call(tabs[i]);
+    }
+}
+
+
+
+</script>
+
+</body>
+</html>

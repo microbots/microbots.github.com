@@ -1,0 +1,170 @@
+/* Written by Sun Wangshu */
+/* 2015.06.10 */
+/*-------- general settings --------*/
+body {
+	font-family: "MicrosoftYaHeiLight*", "Microsoft YaHei", sans-serif !important;
+	font-size: 14px;
+	/*padding-top: 15px;*/
+	/*padding-bottom: 12px;*/
+}
+/* "Helvetica Neue", Helvetica, Arial, "Hiragino Sans GB", "Hiragino Sans GB W3", "WenQuanYi Micro Hei", "Microsoft YaHei UI", "Microsoft YaHei", sans-serif;	*/
+img {
+	max-width: 100%;
+}
+a, a:active, a:focus, a:hover {
+	text-decoration: none;
+}
+
+.right-padding{
+    margin-right: 20px;
+}
+
+.container-address{
+    padding-left:12px;
+}
+.container-material,.container-number{
+    padding-left:28px;
+}
+.container-ship{
+    padding-left:18px;
+}
+.width-10 {
+	width: 10%;
+}
+.width-20 {
+	width: 20%;
+}
+.width-25 {
+	width: 25%;
+}
+.width-30 {
+	width: 30%;
+}
+.width-40 {
+	width: 40%;
+}
+.width-50 {
+	width: 50%;
+}
+.width-60 {
+	width: 60%;
+}
+.width-70 {
+	width: 70%;
+}
+.width-75 {
+    width: 75%;
+}
+.width-80 {
+	width: 80%;
+}
+.width-90 {
+	width: 90%;
+}
+.width-100 {
+	width: 100%;
+}
+.clear {
+	clear: both;
+}
+
+.card-preview{
+    width:150px;
+    height:90px;
+    background-color: #fff;
+    float:left;
+    box-shadow: 1px 1px 1px #999;
+    margin-left:8px;
+}
+.card-size{
+    width:300px; 
+    height:180px; 
+    border:1px solid #ccc; 
+    box-shadow: 2px 2px 2px #999;
+    background-color: #fff;
+    margin:0 auto;
+}
+
+/*-------- overwrite bootstrap -------*/
+/*.container {
+	width: 100%;
+	max-width: 768px;
+	margin: 0 auto;
+    padding-left:0;
+    padding-right: 0;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+}*/
+
+textarea {
+	resize: none;
+}
+
+@media (max-width: 768px) {
+	.modal-dialog {
+		margin: 30px auto;
+		max-width: 85%;
+	}
+}
+
+.fixed-bottom{
+    position:fixed;
+    bottom:0;
+}
+/*-------- bootstrap custom -------*/
+
+
+/*-------- other custom style --------*/
+/*底部按钮栏*/
+.content-bottom {
+	height: 48px;
+	width: 100%;
+	margin:  0px;
+	position: absolute;
+	bottom: 0px;
+	max-width: 768px;
+    border-top:1px solid #ccc;
+}
+/*底部蓝色按钮*/
+.block-btn-primary {
+    background-color: #107afd;
+    height: 100%;
+    display: inline-block;
+    }
+    .block-btn-primary a {
+    width: 100%;
+    height: 100%;
+    display: block;
+    color: #fff;
+    padding: 10px;
+    font-size: 18px;
+    }
+    /*底部白色按钮*/
+.block-btn-default {
+        background-color: #fff;
+        height: 100%;
+        display: inline-block;
+        }
+        .block-btn-default a {
+        width: 100%;
+        height: 100%;
+        display: block;
+        color: #393535;
+        padding: 10px;
+        font-size: 18px;
+        }
+    .block-btn {
+    /*border-right: 1px solid #ddd;*/
+    height: 100%;
+    display: inline-block;
+    background-color: #fff;
+    }
+    .block-btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #ccc;
+    padding: 10px;
+    font-size: 10px;
+    }
