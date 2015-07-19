@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- ↓ 这些设置不要动 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ↓ 标题 -->
+    <title>编辑模板</title>
+    <!-- ↓ 默认引用bootstrap、icomoon字体以及default样式 -->
+    <link rel="stylesheet" type="text/css" href={{url_for('static',filename="css/bootstrap.min.css")}}>
+  <link rel="stylesheet" type="text/css" href={{url_for('static',filename="css/default.css")}}>
+  <link rel="stylesheet" type="text/css" href={{url_for('static',filename="css/edit.css")}}>
+  <link rel="stylesheet" type="text/css" href={{url_for('static',filename="css/icomoon.css")}}>
+  <link rel="stylesheet" type="text/css" href={{url_for('static',filename="css/edit.css")}}>
+
+
+    <!-- ↓ 自定义css，名称最好和html相同 -->
+
+  </head>
+  <body>
+    <div class="container ">
+     <!--  <div class="row"> -->
+        <div class="describe-text">正面</div>
+        <div class="container-front ">
+            <div  class= "front-padding" name="group" id="card1" value="1">
+
+              <div class = "card1-area">
+              	<div class="card1-logoicon ">
+                	<div class="icontop"><img src={{url_for('static',filename="images/head.png")}}></div>
+               		 <div class="underline1 "></div>
+                	<div class ="iconbottom"><img src={{url_for('static',filename="images/head.png")}}></div>
+                	<!-- <img class="pull-left" src="images/扫一扫.jpg"> -->
+              	</div>
+              	<div class="card1-content0">
+              	<div class="card1-content ">
+                	<div class="card-biaoti biaoti1">姓名</div>
+                	<div name="position" class="card-fubiaoti fubiaoti1">公司 职位</div>
+                	<ul class="card-info list-unstyled">
+                  	<li><span class="icon-phone_paper yanse"></span> 152-1234-5678</li>
+					<li><span class="icon-mail_paper yanse"></span> 123456789@qq.com</li>
+					<li><span class="icon-link_paper yanse"></span> http://www.123.com</li>
+					<li><span class="icon-address_paper yanse"></span> xx省xx市xx区xx路xx号</li>
+                	</ul>
+            	</div>
+            	</div>
+              </div>
+
+            </div>
+
+			<div name="group" id="card2" value="2">
+                <div class = "card2-area">
+              		<div class="card2-logoicon pull-right">
+                		<div class="icontop2"><img src="images/input logo.png"></div>
+               		<!--  <div class="underline1 "></div> -->
+                		<div class="icontop2"><img src="images/二维码1.png"></div>
+                	<!-- <img class="pull-left" src="images/扫一扫.jpg"> -->
+              		</div>
+              		<div class="card2-content0">
+              			<div class="card-biaoti biaoti1 pull-top">姓名</div>
+                		<div name="position" class="card-fubiaoti fubiaoti1">公司 职位</div>
+
+            		</div>
+
+             	 </div>
+              	<div class="card2-content">
+                	<ul class="card-info list-unstyled">
+                  	<li><span class="icon-phone_paper "></span> 152-1234-5678</li>
+					<li><span class="icon-mail_paper "></span> 123456789@qq.com</li>
+					<li><span class="icon-link_paper "></span> http://www.123.com</li>
+					<li><span class="icon-address_paper "></span> xx省xx市xx区xx路xx号</li>
+                	</ul>
+            	</div>
+            </div>
+			 <!--   <div class="card-style btn btn-block" name="group" id="card3" value="3">
+			   <div class="width-100">
+               <div class="card2-content width-50 pull-left">
+			   <h2 class="card-biaoti biaoti3">姓名</h2>
+			   <p class="card-fubiaoti fubiaoti3">公司 职位</p>
+			   </div>
+			   <div class="card2-content width-50 pull-left">
+			    <img class="pull-right " src="images/二维码1.png">
+			   <img class="pull-right jianju " src="images/input logo.png">
+			   <img class="pull-right" src="images/扫一扫.jpg">
+			   </div>
+			   </div>
+			   <div class="pull-left width-100">
+			    <ul class="card-info list-unstyled">
+				<li><span class="icon-phone_paper yanse"></span> 152-1234-5678</li>
+				<li><span class="icon-mail_paper yanse"></span> 123456789@qq.com</li>
+				<li><span class="icon-link_paper yanse"></span> http://www.123.com</li>
+				<li><span class="icon-address_paper yanse"></span> xx省xx市xx区xx路xx号</li>
+				</ul>
+			   </div>
+			   </div>
+			   <div class="card-style btn btn-block" name="group" id="card4" value="4">
+               <div class="card2-content width-60 pull-left">
+			   <h2 class="card-biaoti biaoti4">姓名</h2>
+			   <p class="card-fubiaoti fubiaoti4">公司 职位</p>
+			   <ul class="card-info list-unstyled">
+				<li><span class="icon-phone_paper yanse"></span> 152-1234-5678<li>
+				<li><span class="icon-mail_paper yanse"></span> 123456789@qq.com</li>
+				<li><span class="icon-link_paper yanse"></span> http://www.123.com</li>
+				<li><span class="icon-address_paper yanse"></span> xx省xx市xx区xx路xx号</li>
+				</ul>
+			   </div>
+			   <div class="card3-logo width-40 pull-right">
+			   <img class="pull-right" src="images/二维码1.png">
+			   <img class="pull-right" src="images/扫一扫.jpg">
+			   <img class="pull-right xiaduiqi" src="images/input logo.png">
+			   </div>
+               </div>
+			   <div class="card-style btn btn-block" name="group" id="card5" value="5">
+			   <div class="width-100">
+               <div class="card2-content width-50 pull-left">
+			   <h2 class="card-biaoti biaoti3">姓名</h2>
+			   <p class="card-fubiaoti fubiaoti5">公司 职位</p>
+			   <div class="underline2 width-80 background-yanse"></div>
+			   </div>
+			   <div class="card2-content width-50 pull-left">
+			    <img class="pull-right " src="images/二维码1.png">
+			   <img class="pull-right jianju " src="images/input logo.png">
+			   <img class="pull-right" src="images/扫一扫.jpg">
+			   </div>
+			   </div>
+			   <div class="pull-left width-100">
+			    <ul class="card-info list-unstyled">
+				<li><span class="icon-phone_paper yanse"></span> 152-1234-5678</li>
+				<li><span class="icon-mail_paper yanse"></span> 123456789@qq.com</li>
+				<li><span class="icon-link_paper yanse"></span> http://www.123.com</li>
+				<li><span class="icon-address_paper yanse"></span> xx省xx市xx区xx路xx号</li>
+				</ul>
+			   </div>
+			   </div>
+			   <div class="card-style btn btn-block" name="group" id="card6" value="6">
+               <div class="card2-content width-60 pull-left">
+			   <h2 class="card-biaoti biaoti4">姓名</h2>
+			   <p class="card-fubiaoti fubiaoti6">公司 职位</p>
+			   <div class="width-70 underline2 background-yanse"></div>
+			   <ul class="card-info list-unstyled">
+				<li><span class="icon-phone_paper yanse"></span> 152-1234-5678<li>
+				<li><span class="icon-mail_paper yanse"></span> 123456789@qq.com</li>
+				<li><span class="icon-link_paper yanse"></span> http://www.123.com</li>
+				<li><span class="icon-address_paper yanse"></span> xx省xx市xx区xx路xx号</li>
+				</ul>
+			   </div>
+			   <div class="card3-logo width-40 pull-right">
+			   <img class="pull-right" src="images/二维码1.png">
+			   <img class="pull-right" src="images/扫一扫.jpg">
+			   <img class="pull-right xiaduiqi" src="images/input logo.png">
+			   </div>
+               </div>
+			   <div class="card-style btn btn-block" name="group" id="card7" value="7">
+               <div class="card2-content width-60 pull-left">
+			   <h2 class="card-biaoti biaoti4">姓名</h2>
+			   <p class="card-fubiaoti fubiaoti4">公司 职位</p>
+			   <div class="card7-sekuai background-yanse">
+			   <ul class="card-info7 list-unstyled">
+				<li><span class="icon-phone_paper "></span> 152-1234-5678<li>
+				<li><span class="icon-mail_paper "></span> 123456789@qq.com</li>
+				<li><span class="icon-link_paper "></span> http://www.123.com</li>
+				<li><span class="icon-address_paper"></span> xx省xx市xx区xx路xx号</li>
+				</ul>
+				</div>
+			   </div>
+			   <div class="card3-logo width-40 pull-right">
+			   <img class="pull-right logojianju" src="images/input logo.png">
+			   <img class="pull-right" src="images/二维码1.png">
+			   <img class="pull-right" src="images/扫一扫.jpg">
+			   </div>
+               </div>
+			   <div class="card-style btn btn-block" name="group" id="card8" value="8">
+			   <div class="width-100">
+               <div class="card2-content width-50 pull-left">
+			   <h2 class="card-biaoti biaoti3">姓名</h2>
+			   <p class="card-fubiaoti fubiaoti3">公司 职位</p>
+			   </div>
+			   <div class="card2-content width-50 pull-right">
+			    <img class="pull-right " src="images/二维码1.png">
+			   <img class="pull-right jianju " src="images/input logo.png">
+			   <img class="pull-right" src="images/扫一扫.jpg">
+			   </div>
+			   </div>
+			   <div class="pull-left width-100 card8-sekuai background-yanse">
+			    <ul class="card-info8 list-unstyled">
+				<li><span class="icon-phone_paper "></span> 152-1234-5678</li>
+				<li><span class="icon-mail_paper "></span> 123456789@qq.com</li>
+				<li><span class="icon-link_paper "></span> http://www.123.com</li>
+				<li><span class="icon-address_paper "></span> xx省xx市xx区xx路xx号</li>
+				</ul>
+			   </div>
+			   </div>
+ -->
+
+		</div>
+        <!-- </div> -->
+
+      <!-- <div class="row"> -->
+      <div class="describe-text">反面 (左右滑动切换样式)</div>
+        <div class="container-back ">
+            <!--  <div  id = "background-yanse" id="back1">
+                   <div class="banner-color center">
+				   <div ><img class="" src="images/input logo.png"></div>
+      				<div ><img src="images/选填2.png"></div>
+				   </div>
+
+            </div> -->
+		<!-- 	<div id = "background-yanse " id="back2">
+                   <div class="back2-bg back2-center">
+				   <div><img src="images/input logo.png"></div>
+			       <div><img src="images/选填2.png"></div>
+				   </div>
+            </div> -->
+			<div  id = "background-yanse" id="back3">
+				<div class = "pull-left back3-bg0">
+				<div class = "back3-bg"></div>
+				<div class = "back3-bg1"></div>
+				</div>
+                   <div class=" back2-center back3-logo ">
+				   <div><img src="images/input logo.png"></div>
+			       <div><img src="images/选填1.png"></div>
+				   </div>
+				   <!-- <div class="dise3 background-yanse"></div> -->
+				<div class = "pull-right back3-bg0">
+				<div class = "back3-bg"></div>
+				<div class = "back3-bg1"></div>
+				</div>
+            </div>
+		</div>
+			<!-- </div> -->
+
+      <!-- <div class="row"> -->
+        <div class="container-color ">
+            <div class="color-block pull-left" id="black-color">
+
+            </div>
+            <div class="color-block pull-left" id="blue-color">
+
+            </div>
+            <div class="color-block pull-left" id="lightblue-color">
+
+            </div>
+            <div class="color-block pull-left" id="green-color">
+
+            </div>
+            <div class="color-block pull-left" id="yellow-color">
+
+            </div>
+            <div class="color-block pull-left" id="orange-color">
+
+            </div>
+            <div class="color-block pull-left" id="red-color">
+
+            </div>
+
+        </div>
+
+        <div class="content-bottom1">
+         <a href="after_edit.html"><center class="width-100 ">
+           完成编辑
+        </center></a>
+      </div>
+    <!-- </div> -->
+</div>
+
+
+    <!-- ↓jQuery和bootstrap的js效果，请保留，顺序不动 -->
+    <script src={{url_for('static',filename="js/jquery-1.10.2.js")}}></script>
+    <script src={{url_for('static',filename="js/bootstrap.min.js")}}></script>
+    <script type="text/javascript">
+    function myfunction(){
+    var kk=sessionStorage.cardtype;
+    var ss=parseInt(kk);
+    switch(ss){
+    case 1: $("#card1").css("display","block");break;
+    case 2: $("#card2").css("display","block");break;
+    case 3: $("#card3").css("display","block");break;
+    case 4: $("#card4").css("display","block");break;
+    case 5: $("#card5").css("display","block");break;
+    case 6: $("#card6").css("display","block");break;
+    case 7: $("#card7").css("display","block");break;
+    default: $("#card8").css("display","block");
+    }
+    }
+    </script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+    myfunction();
+     $("#black").click(function(){
+    $(".background-yanse").css("background-color",function(){
+    return "black-color"});
+    });
+     $("#blue").click(function(){
+    $(".background-yanse").css("background-color",function(){
+    return "blue-color"});
+    });
+     $("#lightblue").click(function(){
+    $(".background-yanse").css("background-color",function(){
+    return "lightblue-color"});
+    });
+     $("#green").click(function(){
+    $(".background-yanse").css("background-color",function(){
+    return "green-color"});
+    });
+     $("#yellow").click(function(){
+    $(".background-yanse").css("background-color",function(){
+    return "yellow-color"});
+    });
+     $("#orange").click(function(){
+    $(".background-yanse").css("background-color",function(){
+    return "orange-color"});
+    });
+     $("#red").click(function(){
+    $(".background-yanse").css("background-color",function(){
+    return "red-color"});
+    });
+    $("#back3").click(function(){
+    $("#back3").fadeOut(300);
+    });
+     $("#back2").click(function(){
+    $("#back2").fadeOut(300);
+    });
+     $("#back1").click(function(){
+    $("#back3,#back2").fadeIn(300);
+    });
+    });
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,158 @@
+<div class = "abc">Y </div>
+				<div class = "name-item">
+					<div class="name-img"><img style="width:55px;height:55px" src="images/portrait1.png"></div>
+					<div class="name-head">杨宝玲</div>
+					<div class="name-job">东南大学|学生</div>
+				</div>
+				<div class = "name-item">
+					<div class="name-img"><img style="width:55px;height:55px" src="images/portrait.jpg"></div>
+					<div class="name-head">姓名示例</div>
+					<div class="name-job">公司|职位</div>
+				</div>
+
+
+
+
+
+.abc{
+	width:100%;
+	height:18px;
+	background-color: #F5F5F5;
+	font-size:11pt;
+	color:#666;
+	padding:0px 0 0 5px;
+}
+
+.name-item{
+	width:100%;
+	height:70px;
+	/*background-color: #1ff;*/
+	border-bottom:1px solid #eee;
+	border-top:1px solid #eee;
+	border-left:1px solid #eee;
+}
+
+.name-img{
+	padding:7px 2px 0 3px;
+	float:left;
+}
+
+.name-head{
+	padding:7px 0px 0 3px;
+	font-size: 13pt;
+	color:#000;
+}
+
+.name-job{
+	padding:12px 0 0 3px;
+	font-size: 10pt;
+	color:#666;
+}
+
+
+ <div class="container">
+    <div class = "tab-bg">      
+      <ul id='tabnav'>
+      <li class='active' id="tab"><a  href="#a" >全部</a></li>
+      <li  id="tab"><a  href="#b" >重要</a></li>
+      <li id="tab"><a  href="#c"  >客户</a></li>
+      <li id="tab"><a href="#d"   >亲友</a></li>
+   
+      </ul>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+function changeStyle(){
+ this.onclick=function(){
+   var list=this.parentNode.childNodes;
+   for(var i=0;i<list.length;i++){
+        if(1==list[i].nodeType &&  'active'==list[i].className) {
+                list[i].className="";
+        }
+   }
+ this.className='active';
+ }
+
+
+}
+
+ var tabs=document.getElementById('tabnav').childNodes;
+ for(var i=0;i<tabs.length;i++){
+    if(1==tabs[i].nodeType){
+       changeStyle.call(tabs[i]);
+    }
+}
+    <!-- <div id="tab_content">
+      <div id="a" class="content">
+        <div class = "abc">Y </div>
+        <a href="mycard.html"><div class = "name-item">
+          <div class="name-img"><img style="width:55px;height:55px" src="images/tairy1.jpg"></div>
+          <div class="name-head">Tairy</div>
+          <div class="name-job">东南大学|学生</div>
+        </div></a>
+        <div class = "name-item">
+          <div class="name-img"><img style="width:55px;height:55px" src="images/portrait.jpg"></div>
+          <div class="name-head">姓名示例</div>
+          <div class="name-job">公司|职位</div>
+        </div>
+      </div>
+      <div id="b" class="content">bbbbb  </div>
+      <div id="c" class="content">cccccc  </div>
+      <div id="d" class="content">dddd  </div>
+      <div id="e" class="content">eeee  </div>
+    </div>
+
+
+ <div class = "container">
+  <div id="tabbox">
+    <ul class="tabs" id="tabs">
+       <li><a href="#a" tab="tab1">简洁</a></li>
+       <li><a href="#b" tab="tab2">时尚</a></li>
+       <li><a href="#c" tab="tab3">商务</a></li>
+       <li><a href="#d" tab="tab4">奢华</a></li>
+    </ul>
+    <ul class="tab_conbox">
+        <li id="tab1" class="tab_con">
+           <p>a</p>
+        </li>
+            
+        <li id="tab2" class="tab_con">
+            <p>b</p>
+        </li>
+    
+        <li id="tab3" class="tab_con">
+            <p>c</p>
+        </li>
+    
+        <li id="tab4" class="tab_con">
+            <p>d</p>
+        </li>
+    </ul>
+    
+</div>
+</div>
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+    jQuery.jqtab = function(tabtit,tabcon) {
+        $(tabcon).hide();
+        $(tabtit+" li:first").addClass("thistab").show();
+        $(tabcon+":first").show();
+    
+        $(tabtit+" li").click(function() {
+            $(tabtit+" li").removeClass("thistab");
+            $(this).addClass("thistab");
+            $(tabcon).hide();
+            var activeTab = $(this).find("a").attr("tab");
+            $("#"+activeTab).fadeIn();
+            return false;
+        });
+        
+    };
+    /*调用方法如下：*/
+    $.jqtab("#tabs",".tab_con");
+    
+});
+</script>

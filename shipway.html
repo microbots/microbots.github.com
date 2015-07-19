@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- ↓ 这些设置不要动 -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- ↓ 标题 -->
+        <title>配送方式</title>
+        <!-- ↓ 默认引用bootstrap、icomoon字体以及default样式 -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icomoon.css">
+        <link rel="stylesheet" type="text/css" href="css/default.css">
+        <!-- ↓ 自定义css，名称最好和html相同 -->
+        <link rel="stylesheet" type="text/css" href="css/模板.css">
+        <style>
+         .container {
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+       /* padding-left:0;
+        padding-right: 0;*/
+        position: absolute;
+        top: 0px;
+        bottom: 0px; 
+        }
+        .shipper{
+        font-size: 12px;
+        color: #000000;
+        margin-right: 0px;
+        text-align: left;
+
+        }
+        .price{
+        font-size: 14px;
+        color: #000000;
+        text-align: center;
+
+        }
+        .container-address{
+        height: 50px;
+        }
+        .icon-block{
+        font-size: 20px;
+        margin:10px;
+        }
+        .block-btn{
+        border-right: 0px solid;
+        }
+        .btn.active, .btn:active{
+        border-top: 1px solid #107afd;
+        border-bottom: 1px solid #107afd;
+        }
+        .btn{
+            padding: 0px;
+            white-space: inherit;
+            border: 1px solid #ccc;
+        }
+        .info-box{
+            padding-top: 15px;
+            padding-right: 0px;
+            padding-left: 15px;
+            padding-bottom: 0px;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div id="shipwaylayer" class="container">
+            <div class="row ">
+
+                    <div class="btn-group-vertical width-100" data-toggle="buttons" >
+                        <label id="6yuan" value="6" class="btn btn-block container-address"  style="text-align: left;">
+                            <div class="info-box" >
+                                <input type="radio" name="options" id="option1">
+                                <div class="shipper width-70 pull-left" >普通快递:</div>
+                                <div class="price width-30 pull-right" >6元</div >
+                            </div>
+                        </label>
+                        <label id="10yuan" class="btn btn-block container-address"  style="text-align: left;">
+                            <div class="info-box" >
+                                <input type="radio" name="options" id="option1">
+                                <div class="shipper width-70 pull-left" >顺丰快递:</div>
+                                <div class="price width-30 pull-right" >10元</div >
+                            </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <!-- ↓jQuery和bootstrap的js效果，请保留，顺序不动 -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+    $("#6yuan").bind("click",function(){
+        sessionStorage.shipper="普通快递";
+        sessionStorage.fee="6";
+        location.href = "makeOrder.html"
+    })
+    $("#10yuan").bind("click",function(){
+        sessionStorage.shipper="顺丰快递";
+        sessionStorage.fee="10";
+        location.href = "makeOrder.html"
+    })
+    </script>
+
+
+
+</body>
+</html>

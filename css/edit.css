@@ -1,0 +1,277 @@
+/*    div {
+      border: 1px solid #ddd;
+    }*/
+.container-front{
+    	width:300px;
+    	height:180px;
+        /*background-color:#f00;*/
+        /*padding:18px 14px 20px 24px;*/
+        margin:0 auto;
+        box-shadow: 2px 2px 2px #999;
+        background-color:#fff;
+        border:1px solid #ddd;
+        position:relative;
+
+    }
+    .container-back{
+    	width:300px;
+    	height:180px;
+        background-color:#fff;
+		/*padding:18px 14px 20px 24px;*/
+		margin:0 auto;
+        box-shadow: 2px 2px 2px #999;
+        position:relative;
+    }
+	
+    .container-color{
+		width: 100%;
+        height: 42px;
+        border: 1px solid #ddd;   
+        position: absolute;
+        bottom: 44px;
+        /*max-width: 768px;*/
+        background-color: #00f;
+        float:left;
+        padding-left: 0;
+    }
+    .block-btn {
+    border-right: 1px solid #ddd;
+    height: 100%;
+    display: inline-block;
+    /*background-color: #00f;*/
+    }
+    .block-btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #ccc;
+    padding: 10px;
+    font-size: 10px;
+    }
+    .color-block{
+        height: 50px;
+        width:14.28%;
+    }
+    #black-color{
+        background-color: #010101;
+    }
+    #blue-color{
+        background-color: #2E6FBC;
+    }
+    #lightblue-color{
+        background-color: #30A1D4;
+    }
+    #green-color{
+        background-color: #0A9E50;
+    }
+    #yellow-color{
+        background-color: #E58905;
+    }
+    #orange-color{
+        background-color: #F96115;
+    }
+    #red-color{
+        background-color: #8C131B;
+    }
+	#card1{
+	 display:none;
+	}
+	#card2{
+	display:none;
+	}
+	#card3{
+	display:none;
+	}
+	#card4{
+	display:none;
+	}
+	#card5{
+	display:none;
+	}
+	#card6{
+	display:none;
+	}
+	#card7{
+	display:none;
+	}
+	#card8{
+	display:none;
+	}
+    .describe-text{
+        background-color:#E5E5E5;
+        /*font-weight: bold;*/
+        padding:15px  0 2px 28px;
+      /*  padding-top: 15px;*/
+        color:#666;
+    }
+    .describe-text1{
+        background-color:#E5E5E5;
+        font-weight: bold;
+        padding-left: 8px;
+        padding-top: 5px;
+    }
+   .btn-block{
+      width:98%;
+      text-align: left;
+    }
+    .btn{
+      text-align: left;
+    }
+    .btn:active{
+      box-shadow: 1px 0px rgba(0,0,0,.125);
+    }
+
+.qiehuan{
+		position: absolute;
+        top: 60px;
+        max-width: 320px;
+}
+.qiehuan1{
+		position: absolute;
+        top:30px;
+        max-width: 310px;
+}
+
+.container{
+	background-color: #e5e5e5;
+    padding-left:0;
+    padding-right: 0;    
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 100%;
+    max-width: 768px;
+    margin: 0 auto;
+    position: absolute;
+}
+
+/*.container {
+    
+    padding-left:0;
+    padding-right: 0;
+    
+    top: 0px;
+    bottom: 0px;
+}*/
+
+.content-bottom1{
+	height:48px;
+	width:100%;
+	background-color: #fff;line-height: 48px;
+	font-size: 18px;
+	color:#107afd;
+	/*text-align: center;*/
+	position:fixed;
+	bottom:0;
+    border-top:1px solid #ccc;
+}
+
+.underline1{
+	width:54px;
+	height:2px;
+    background-color: #107afd;
+    margin-top: 15px;
+}
+
+.card1-logoicon{
+	padding-left: 10px;
+	width:63px;
+	height:142px;	
+	/*background-color: #0ff;*/
+	/*width:100%;*/
+	/*height:100%;*/
+    position:relative;	
+    float:left;
+}
+
+.card1-area{
+	
+	width:262px;
+	height:142px;
+	/*background-color: #00f;*/
+}
+
+/*.icontop{
+	width:55px;
+	height:55px;
+	position:absolute;
+	top:0;
+    /*float:left;*/
+/*};*/
+
+.iconbottom{
+	width:57px;
+	height:57px;
+	position:absolute;
+	bottom:0;
+    /*background-color: #f00;*/
+}
+
+.card1-content0{
+    width:170px;
+    height:142px;
+    position:relative;
+    /*background-color: #0ff;*/
+    float:right;
+}
+.card1-content{
+    position:absolute;
+    bottom:0;
+}
+
+.fashion-bg1{
+    background: url(../images/templates/纸质名片模板-时尚-1.png)
+}
+
+.front-padding{
+    padding:18px 14px 20px 24px ;
+}
+.banner-color{
+    width:300px;
+    height:78px;
+    background-color: #107afd;
+    position: absolute;
+    top: 54px; 
+    padding-top: 5px;
+}
+
+.center{ text-align:center;margin:0 auto;}
+
+.back2-bg{width:300px; height:180px; background-color: #107afd;}
+.back2-center{text-align:center;margin:0 auto; padding-top:50px;}
+
+.back3-bg0{
+    
+   padding-top: 64px;
+}
+.back3-bg{
+    width:104px;
+    height:30px;
+    background-color: #33a1d3;
+}
+
+.back3-bg1{
+    width:104px;
+    height:5px;
+    background-color: #33a1d3;
+    margin-top: 5px;
+}
+
+.back3-logo{
+    padding-left:5px;float:left;
+}
+
+.top-border{
+    border-top:1px solid #ccc;
+}
+
+.grey-text{color:#009;}
+
+.dingwei{
+    height:180px;
+    top:0px;
+    width:300px;
+    position: absolute;
+    background-color:#fff;
+    
+    }

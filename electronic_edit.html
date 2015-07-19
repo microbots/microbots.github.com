@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>电子名片-编辑内容</title>
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <link rel="stylesheet" type="text/css" href="css/electronic_edit.css">
+  <link rel="stylesheet" type="text/css" href="css/icomoon.css">
+  <link rel="stylesheet" type="text/css" href="css/jasny-bootstrap.min.css">
+</head>
+<style type="text/css">
+.bottom {
+  height: 48px;
+  width: 100%;
+  margin: 50px -15px 0px;
+  position: absolute;
+  /*bottom: 0px;*/
+  max-width: 768px;
+}
+.contact-item-basic {
+  min-height: 53px;
+  width: 100%;
+  /*border-bottom: 1px solid #ddd;*/
+  margin-bottom: 20px;
+  padding-top: 7px;
+}
+.item-tag {
+  font-size: 13px;
+  color: #107afd;
+  margin-bottom: 1px;
+  border-bottom: 1px solid #ddd
+}
+.item-value {
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+</style>
+<body>
+  <div class="container">
+    <form class="form-horizontal" id="form">
+      <div class="form-group form-end-1">
+        <div class="width-30 pull-left div-portrait">
+          <div class="portrait-positioner">
+            <div id="headpic" class="fileinput fileinput-new" data-provides="fileinput">
+            <div  class="fileinput-preview btn-file" type="file" data-trigger="fileinput" style="width: 80px; height: 80px;">
+              <img id="image" src="images/head.png" class="img-circle" />
+            </div>
+            <div>
+              <span style="display:none; " class="btn btn-default btn-file"><span class="fileinput-new"></span><span class="fileinput-exists"></span><input type="file" ></span>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div class="width-70 pull-left" id="basic-info">
+          <input type="text" class="form-control" id="inputDefault" placeholder="姓名">
+          <input type="text" class="form-control" id="inputDefault" placeholder="公司">
+          <input type="text" class="form-control" id="inputDefault" placeholder="职位">
+        </div>
+      </div>
+      <!-- form-end-1 -->
+      <div class="form-group form-group-collapse form-border-top" id="basic-contact" name="phone">
+        <div class="input-group width-100">
+          <div class="input-group-btn width-30">
+            <button type="button" id="add-btn" class="btn btn-none btn-icon col-xs-4"><span class="icon-add_1"></span></button>
+            <button type="button" name="title-btn" class="btn btn-none dropdown-toggle btn-right col-xs-8" data-toggle="modal" data-target="#phoneModal">
+              <!-- 模态框内容在文件底部 -->
+              <div class="pull-left"><span>电话</span></div>
+              <div class="pull-right"><span class="icon-to_right"></span></div>
+            </button>
+          </div>
+          <input type="text" class="form-control" placeholder="电话">
+        </div>
+      </div>
+      <div class="form-group form-group-collapse" id="basic-contact" name="email">
+        <div class="input-group width-100">
+          <div class="input-group-btn width-30">
+            <button type="button" id="add-btn" class="btn btn-none btn-icon col-xs-4"><span class="icon-add_1"></span></button>
+            <button type="button" name="title-btn" class="btn btn-none dropdown-toggle btn-right col-xs-8" data-toggle="modal" data-target="#emailModal">
+              <div class="pull-left"><span>邮箱</span></div>
+              <div class="pull-right"><span class="icon-to_right"></span></div>
+            </button>
+          </div>
+          <input type="text" class="form-control" placeholder="邮箱">
+        </div>
+      </div>
+      <div class="form-group form-group-collapse" id="basic-contact">
+        <div class="input-group width-100">
+          <div class="input-group-btn width-30">
+            <button type="button" id="add-btn" class="btn btn-none btn-icon col-xs-4"><span class="icon-add_1"></span></button>
+            <button type="button" name="title-btn" class="btn btn-none dropdown-toggle btn-right col-xs-8" data-toggle="modal" data-target="#faxModal">
+              <div class="pull-left"><span>传真</span></div>
+              <div class="pull-right"><span class="icon-to_right"></span></div>
+            </button>
+          </div>
+          <input type="text" class="form-control" placeholder="传真">
+        </div>
+      </div>
+      <div class="form-group form-group-collapse" id="basic-contact" name="link">
+        <div class="input-group width-100">
+          <div class="input-group-btn width-30">
+            <button type="button" id="add-btn" class="btn btn-none btn-icon col-xs-4"><span class="icon-add_1"></span></button>
+            <button type="button" name="title-btn" class="btn btn-none dropdown-toggle btn-right col-xs-8" data-toggle="modal" data-target="#siteModal">
+              <div class="pull-left"><span>网址</span></div>
+              <div class="pull-right"><span class="icon-to_right"></span></div>
+            </button>
+          </div>
+          <input type="text" class="form-control" placeholder="URL">
+        </div>
+      </div>
+      <div class="form-group form-group-collapse" id="basic-contact" name="address">
+        <div class="input-group width-100">
+          <div class="input-group-btn width-30">
+            <button type="button" id="add-btn" class="btn btn-none btn-icon col-xs-4"><span class="icon-add_1"></span></button>
+            <button type="button" name="title-btn" class="btn btn-none dropdown-toggle btn-right col-xs-8" data-toggle="modal" data-target="#addressModal">
+              <div class="pull-left"><span>地址</span></div>
+              <div class="pull-right"><span class="icon-to_right"></span></div>
+            </button>
+          </div>
+          <input type="text" class="form-control" placeholder="地址">
+        </div>
+      </div>
+      <div class="form-group form-group-collapse form-end-2" id="basic-contact">
+        <div class="input-group width-100">
+          <div class="input-group-btn width-30">
+            <button type="button" id="add-btn" class="btn btn-none btn-icon col-xs-4"><span class="icon-add_1"></span></button>
+            <button type="button" name="title-btn" class="btn btn-none dropdown-toggle btn-right col-xs-8" data-toggle="modal" data-target="#socialModal">
+              <div class="pull-left"><span>微信</span></div>
+              <div class="pull-right"><span class="icon-to_right"></span></div>
+            </button>
+          </div>
+          <input type="text" class="form-control" placeholder="社交账号">
+        </div>
+      </div>
+
+
+
+      <!-- 用于标记个人简介的位置 -->
+      <div id="introAnchor"></div>
+      <!-- form-end-2 -->
+      <div id="selfIntro" class="form-group form-end-3">
+        <div class="input-group width-100">
+          <div class="input-group-btn">
+            <button type="button"  class="btn btn-none btn-icon width-10"></button>
+            <button type="button" id="intro" class="btn btn-none btn-right width-90" onclick="addIntro(this)">
+              <div class="pull-left"><span>个人简介</span></div>
+              <div class="pull-right"><span class="icon-to_right long-space-right"></span></div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div id="customAnchor"></div>
+      <!-- form-end-3 -->
+      <div class="form-group form-end-4" id="form-4">
+        <div class="input-group width-100">
+          <div class="input-group-btn">
+            <button type="button" id="onCustom" data-toggle="modal" data-target="#myModal-custom" class="btn btn-none btn-icon width-10"><span class="icon-add_1"></span></button>
+            <button type="button" id="onCustom" class="btn btn-none btn-right width-90" data-toggle="modal" data-target="#myModal-custom">
+              <div class="pull-left"><span id="#custominput">添加自定义文本</span></div>
+              <div class="pull-right"><span class="icon-to_right long-space right"></span></div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- form-end-4 -->
+      <div class="form-group div-file-input form-end-4">
+      <p style="margin-bottom: 5px;color: #666">公司Logo</p>
+        <div class="fileinput fileinput-new" data-provides="fileinput">
+            <div  class="fileinput-preview btn-file" type="file" data-trigger="fileinput" style="width: 127px; height: 127px;">
+
+              <img id="image" src="images/placeholder.png" />
+            </div>
+            <div>
+              <span style="display:none; " class="btn btn-default btn-file"><span class="fileinput-new"></span><span class="fileinput-exists"></span><input type="file" ></span>
+            </div>
+          </div>
+      </div>
+      <!-- form-end-4 again -->
+      <div class="row">
+        <div class="bottom">
+          <div class="form-group btn-submit" style="margin-bottom: -15px">
+        <center><a href="electronic_finish.html" type="submit" class="btn btn-submit width-100" onclick="finished(this)">完成编辑</a></center>
+      </div>
+        </div>
+      </div>
+<!-- electronic_finish.html -->
+      <!-- form-end-5 -->
+    </form>
+  </div>
+
+  <!-- Modal 集合-->
+  <!-- 电话 -->
+  <div class="modal fade" id="phoneModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="list-group">
+        <a href="#" class="list-group-item active">电话</a>
+        <a href="#" class="list-group-item">手机</a>
+        <a href="#" class="list-group-item">公司</a>
+        <a href="#" class="list-group-item">住宅</a>
+        <a href="#" class="list-group-item">个人</a>
+        <a href="#" class="list-group-item">工作</a>
+        <a href="#" class="list-group-item">主要</a>
+      </div>
+       <div class="modal-footer">
+        <center><button type="button" class="btn btn-default" data-dismiss="modal">取消</button></center>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 邮箱 -->
+  <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="list-group" id="basic-info">
+        <a href="#" class="list-group-item active">邮箱</a>
+        <a href="#" class="list-group-item">个人</a>
+        <a href="#" class="list-group-item">公司</a>
+      </div>
+       <div class="modal-footer">
+        <center><button type="button" class="btn btn-default" data-dismiss="modal">取消</button></center>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 传真 -->
+  <div class="modal fade" id="faxModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="list-group">
+        <a href="#" class="list-group-item active">传真</a>
+        <a href="#" class="list-group-item">传呼</a>
+      </div>
+       <div class="modal-footer">
+        <center><button type="button" class="btn btn-default" data-dismiss="modal">取消</button></center>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- URL -->
+  <div class="modal fade" id="siteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="list-group">
+        <a href="#" class="list-group-item active">网址</a>
+        <a href="#" class="list-group-item">公司网址</a>
+        <a href="#" class="list-group-item">个人</a>
+        <a href="#" class="list-group-item">博客</a>
+        <a href="#" class="list-group-item">LinkedIn</a>
+      </div>
+       <div class="modal-footer">
+        <center><button type="button" class="btn btn-default" data-dismiss="modal">取消</button></center>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 地址 -->
+  <div class="modal fade" id="addressModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="list-group">
+        <a href="#" class="list-group-item active">地址</a>
+        <a href="#" class="list-group-item">住宅</a>
+        <a href="#" class="list-group-item">公司</a>
+      </div>
+       <div class="modal-footer">
+        <center><button type="button" class="btn btn-default" data-dismiss="modal">取消</button></center>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 社交账号 -->
+  <div class="modal fade" id="socialModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      <div class="list-group">
+        <a href="#" class="list-group-item active">微信</a>
+        <a href="#" class="list-group-item">QQ</a>
+        <a href="#" class="list-group-item">微信公众号</a>
+        <a href="#" class="list-group-item">腾讯微博</a>
+        <a href="#" class="list-group-item">新浪微博</a>
+        <a href="#" class="list-group-item">Facebook</a>
+        <a href="#" class="list-group-item">Twitter</a>
+      </div>
+       <div class="modal-footer">
+        <center><button type="button" class="btn btn-default" data-dismiss="modal">取消</button></center>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 个人简介 -->
+  <div class="modal fade" id="myModal-intro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <input type="text" class="form-control" value="个人简介" >
+        </div>
+        <div class="modal-body modal-body-collapse">
+          <textarea class="form-control" rows="7" placeholder="输入内容"></textarea>
+        </div>
+        <div class="modal-footer">
+          <center>
+            <button type="button" id="introSave" class="btn btn-save" onclick="saveIntro(this)">保存</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 自定义文本 -->
+  <div class="modal fade" id="myModal-custom" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header modal-header-collapse">
+          <input type="text" class="form-control" placeholder="标题" >
+        </div>
+        <div class="modal-body modal-body-collapse">
+          <textarea class="form-control" rows="7" placeholder="输入内容" value="1"></textarea>
+        </div>
+        <div class="modal-footer">
+          <center>
+            <button id="customSave" type="button" class="btn btn-save" onclick="save(this)">保存</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 自定义文本编辑框 -->
+  <div class="modal fade" id="custom-edit" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header modal-header-collapse">
+          <input type="text" class="form-control" placeholder="标题" >
+        </div>
+        <div class="modal-body modal-body-collapse">
+          <textarea class="form-control" rows="7" placeholder="输入内容" value="1"></textarea>
+        </div>
+        <div class="modal-footer">
+          <center>
+            <button id="customSave" type="button" class="btn btn-save" onclick="saveEdit(this)">保存</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+          </center>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="js/jquery-1.10.2.js"></script>
+  <!-- Include all compiled plugins (below), or include individual files as needed -->
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jasny-bootstrap.min.js"></script>
+  <script type="text/javascript">
+
+       $(function(){
+          fillForm()
+       });
+       //监听头像上传，修改为圆角图片
+       $("#headpic").bind("change.bs.fileinput",function(){
+          $("#headpic").find("img:first").attr("class","img-circle")
+       });
+      //自定义文本保存按钮
+      function save (obj) {
+        var content = $(obj).parents(".modal-content")
+        title = content.find("input").val()
+        text = content.find("textarea").val()
+        $("#myModal-custom").modal('hide')
+        $("#customAnchor").before("<div id='customText' class='customText contact-item-basic clo-xs-12' onclick='edit(this)'><div class='width-100'><p class='item-tag'>"+title+"</p><p class='item-value'  style='word-break:break-all;'>"+text+"</p></div></div>")
+        content.find("input").val("")
+        content.find("textarea").val("")
+      }
+      var currentEdit = 0 //当前所编辑的文本区域
+
+      //编辑按钮
+      function edit (obj) {
+        $("#custom-edit").modal('show')
+        currentEdit = obj
+      }
+      //编辑框中的保存按钮
+      function saveEdit (obj) {
+        var content = $(obj).parents(".modal-content")
+        title = content.find("input").val()
+        text = content.find("textarea").val()
+        $(currentEdit).find(".item-tag").html(title)
+        $(currentEdit).find(".item-value").html(text)
+        $("#custom-edit").modal('hide')
+
+      }
+      //添加个人信息
+      function addIntro (obj) {
+        $("#myModal-intro").modal('show')
+      }
+      //保存并更新个人信息
+      function saveIntro (obj) {
+        var content = $(obj).parents(".modal-content")
+        title = content.find("input").val()
+        text = content.find("textarea").val()
+        $("#myModal-intro").modal('hide')
+        $("#introAnchor").html("<div class='contact-item-basic clo-xs-12' data-toggle='modal' data-target='#myModal-intro'><div class='width-100'><p class='item-tag'>"+title+"</p><p class='item-value'  style='word-break:break-all;'>"+text+"</p></div></div>")
+        $("#selfIntro").remove()
+        sessionStorage.infoText = text
+        sessionStorage.infoTitle = title
+
+      }
+
+
+      //添加按钮逻辑
+      $("#form").on("click","button[id='add-btn']",function(){
+        var p = $(this).parents(".form-group-collapse")
+        if (p.hasClass("form-border-top")) {
+          addNewLine(p)
+          p.removeClass("form-border-top")
+          p.find("span[class='icon-delete']").attr("class","icon-add_1")
+          p.find("button[id='del-btn']").attr("id","add-btn")
+        }
+        else if(p.hasClass("form-end-2")){
+          p.removeClass("form-end-2")
+          addNewLine(p)
+          p.addClass("form-end-2")
+          p.find("span[class='icon-delete']").attr("class","icon-add_1")
+          p.find("button[id='del-btn']").attr("id","add-btn")
+        }
+        else{
+          addNewLine(p)
+          p.find("span[class='icon-delete']").attr("class","icon-add_1")
+          p.find("button[id='del-btn']").attr("id","add-btn")
+        }
+        /*在p节点前面插入p节点（包含节点本身）*/
+        function addNewLine(p) {
+          p.find("span[class='icon-add_1']").attr("class","icon-delete")
+          p.find("button[id='add-btn']").attr("id","del-btn")
+          p.before(function(){
+            return $(this).prop("outerHTML")//获取包含当前节点的html
+          });
+        }
+      });
+      $("#form").on("click","button[id='del-btn']",function(){
+          var p = $(this).parents(".form-group-collapse");
+          if (sessionStorage.length>0) {
+            for (var i = 0; i < sessionStorage.length; i++) {
+            var key = sessionStorage.key(i)
+            var value =sessionStorage.getItem(key)
+            if(value.split("|")[0]==p.index())
+            {
+              sessionStorage.removeItem(key)
+
+              p.remove();
+              sessionStorage.page_form=$("#form").html()
+            }
+            p.remove();
+          };
+        }else{
+          p.remove()
+        };
+
+
+
+      });
+      //点击文本标题-->选择新的标题
+      $("#form").on("click","button[name='title-btn']",function(){
+        var current_title = $(this).find("span:first")
+        var current_placeholder = $(this).parents(".input-group").find("input[type='text']")
+        var current_modal = $(this).attr("data-target")
+        $(current_modal).find("a").click(function(){
+          var new_title = $(this).html()
+          current_title.html(new_title)
+          // current_placeholder.attr("placeholder",new_title)
+          $(current_modal).modal('hide')
+        })
+
+      });
+      //存储
+      function saveToSessionStore (key,value) {
+         sessionStorage.setItem(key,value)
+      }
+      //读取
+      function getFromSessionStore (key) {
+        return sessionStorage.getItem(key.toString())
+      }
+      //获取并储存全部的表单
+      function getAlldata (argument) {
+
+        var name = $("#basic-info").find("input[type='text']:eq(0)").val()
+        var corp = $("#basic-info").find("input[type='text']:eq(1)").val()
+        var position = $("#basic-info").find("input[type='text']:eq(2)").val()
+        saveToSessionStore("name",name)
+        saveToSessionStore("corp",corp)
+        saveToSessionStore("position",position)
+        var count = 0
+        $(".form-group-collapse").each(function(){
+          count++;
+          var index = $(this).index()
+          var text =$(this).find("input[type='text']").val()
+          var title = $(this).find("button[name='title-btn']").find("span:first").html()
+          var type = $(this).attr("name")
+          saveToSessionStore(count,index+"|"+title+"|"+text+"|"+type)
+          sessionStorage.basicCount=count
+        })
+        $(".customText").each(function(){
+          count++;
+          var index = $(this).index()
+          var customTitle = $(this).find(".item-tag").text()
+          var customText  = $(this).find(".item-value").text()
+          saveToSessionStore(count,index+"|"+customTitle+"|"+customText)
+          sessionStorage.customCount = count-sessionStorage.basicCount
+        });
+        sessionStorage.page_form=$("#form").html()
+      }
+      //根据缓存重新填写表格
+      function fillForm (argument) {
+        //恢复页面结构
+        $("#form").html(sessionStorage.page_form)
+        var name = getFromSessionStore ("name");
+        var corp = getFromSessionStore ("corp");
+        var position = getFromSessionStore ("position");
+        var text  = sessionStorage.infoText;
+        var title = sessionStorage.infoTitle;
+        $("#basic-info").find("input[type='text']:eq(0)").val(name)
+        $("#basic-info").find("input[type='text']:eq(1)").val(corp)
+        $("#basic-info").find("input[type='text']:eq(2)").val(position)
+        if (text||title) {
+          $("#introAnchor").html("<div class='contact-item-basic clo-xs-12' data-toggle='modal' data-target='#myModal-intro'><div class='width-100'><p class='item-tag'>"+title+"</p><p class='item-value'  style='word-break:break-all;'>"+text+"</p></div></div>")
+        $("#selfIntro").remove()
+        };
+        var count=0
+        //基础表单
+        $(".form-group-collapse").each(function(){
+          count++;
+          var text = getFromSessionStore (count);
+          if (text) {
+            $(this).find("input[type='text']").val(text.split("|")[2]);
+          };
+        });
+        //自定义
+        $(".form-group-collapse").each(function(){
+          count++;
+          var text = getFromSessionStore (count);
+          if (text) {
+            $("#customText").find(".item-tag").val(text.split("|")[1]);
+            $("#customText").find(".item-value").val(text.split("|")[2]);
+          };
+        });
+       }
+      function finished (obj) {
+        getAlldata()
+      }
+  </script>
+</body>
+</html>

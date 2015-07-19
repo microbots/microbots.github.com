@@ -1,0 +1,154 @@
+/*-------- electronic_edit.html --------*/
+
+/*-------- bootstrap overwrite --------*/
+.form-control {
+	border: none;
+	border-bottom: 1px solid #ddd;
+	border-radius: 0px;
+	height: 44px;
+	box-shadow: none;
+	font-size: 15px;
+}
+.form-control:focus {
+	border: none;
+	-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+	border-bottom: 1px solid #ddd;
+}
+
+.btn-none, .btn-none:active, .btn-none:focus, .btn-none:hover {
+	background-color: transparent !important;
+}
+
+/* modal */
+.modal-header {
+	padding: 12px;
+}
+.modal-title {
+	font-size: 16px;
+}
+.modal-footer {
+	border-top: none;
+	padding: 10px;
+}
+/* list-group */
+.list-group {
+	margin-bottom: 0;
+}
+.list-group-item:first-child {
+	border-top: none;
+}
+.list-group-item:last-child {
+	border-radius: 0;
+}
+
+/*-------- custom -------*/
+
+*/
+/* modal */
+.modal-header-collapse {
+	padding: 5px 0px;
+	border-bottom: none;
+}
+.modal-body-collapse {
+	padding: 0;
+}
+
+/* form-group */
+.form-group-collapse {
+	margin-bottom: 0;
+	border-bottom: 1px solid #ddd;
+	border-collapse: collapse;
+}
+.form-group-collapse .form-control {
+	border: none;
+}
+.form-border-top {
+	border-top: 1px solid #ddd;
+}
+/* form-group margin-bottom*/
+.form-end-1 {
+	margin-bottom: 27px;
+}
+.form-end-2 {
+	margin-bottom: 32px;
+}
+.form-end-3 {
+	margin-bottom: 49px;
+	border-bottom: 1px solid #ddd;
+}
+.form-end-4 {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+}
+
+/* portrait */
+.div-portrait {
+	height: 132px;
+}
+.portrait-positioner {
+	position: relative;
+	width: 70%;
+	max-width: 90px;
+	margin: auto;
+	top: 30px;
+}
+/* input-group */
+.input-group-btn.width-30 {
+	border-right: 1px solid #ddd;
+}
+.btn-icon {
+	height: 44px;
+	padding: 4px 0px 0px 12px;
+	border:none;
+	border-radius: 0px;
+	margin: 0px !important;
+}
+.btn .icon-add_1 {
+	font-size: 17px;
+	color: #107afd;
+}
+.btn .icon-delete{
+	font-size: 17px;
+	color: #CC0033;
+}
+.btn-right {
+	height: 44px;
+	margin: 0px !important;
+	border:none;
+	border-radius: 0px;
+	padding: 0px 7px;
+}
+.btn .icon-to_right {
+	font-size: 12px;
+	color: #ccc;
+	margin-left: 5px;
+}
+/* long button */
+.btn-save, .btn-save:active, .btn-save:focus, .btn-save:hover {
+	color: #fff;
+	background-color: #107afd;
+	border-color: #107afd;
+}
+.long-space-right {
+	margin-right: 8px;
+}
+
+/* submit */
+.btn-submit {
+	height: 48px;
+	border:none;
+	border-radius: 0px;
+	background-color: #107AFD;
+	color: #FFF;
+	font-size: 18px
+}
+.btn-submit:active, .btn-submit:focus, .btn-submit:hover {
+	color: #FFF;
+	font-size: 18px
+}
+/* upload logo */
+.div-file-input {
+	padding: 10px 15px;
+}

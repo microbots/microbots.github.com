@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- ↓ 这些设置不要动 -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- ↓ 标题 -->
+        <title>制作名片</title>
+        <!-- ↓ 默认引用bootstrap、icomoon字体以及default样式 -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icomoon.css">
+        <link rel="stylesheet" type="text/css" href="css/default.css">
+        <!-- ↓ 自定义css，名称最好和html相同 -->
+        <link rel="stylesheet" type="text/css" href="css/jasny-bootstrap.min.css">
+        <style>
+
+        .container {
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+        padding-left:0;
+        padding-right: 0;
+        position: absolute;
+        top: 0px;
+        bottom: 0px;
+        }
+        .block-btn {
+        height: 100%;
+        display: inline-block;
+        background-color: #fff;
+        }
+        .block-btn a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #ccc;
+        font-size: 10px;
+        }
+        .icon-button2 {
+        color: #393535;
+        font-size: 24px;
+        }
+        .container-preview{
+        background-color:#E5E5E5;
+        padding-bottom: 10px;
+        }
+        .container-order{
+        height: 70px;
+        border: 1px solid #ddd;
+        width: 100%;
+        max-width: 768px;
+        padding: 10px;
+        }
+        .container-ship{
+        height: 50px;
+        border-bottom: 1px solid #ccc;
+        border-top: 1px solid #ccc;
+        }
+        .container-material{
+          font-size: 14px;
+          color: #666;
+          font-weight: bold;
+          padding-top: 10px;
+          height: 55px;
+          border-top: 1px solid #ccc;
+        }
+        .container-number{
+        height: 55px;
+        }
+        .container-message{
+        height: 35px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+        color: #999;
+        font-size: 14pt;
+        }
+        .container-address{
+        height: 100%;
+        border-top: 1px solid #ccc;
+        }
+        .describe-text{
+        background-color:#E5E5E5;
+        padding-left: 28px;
+        padding-top: 5px;
+        color: #666
+        }
+        .card-style{
+        background-color: #ffffff;
+        padding-right: 7px;
+        padding-left:12px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 8px;
+        box-shadow: 1px 1px 1px #999;
+        }
+        #text{
+            font-size: 14px;
+            color: #666;
+            font-weight: bold;
+        }
+        #sum {
+        /*margin: 10px;*/
+        margin-top:0px;
+        color:#000000;
+        text-align: right;
+        }
+        #sum p{
+        font-size: 10pt;
+        }
+        #sum span{
+        font-size: 15pt;
+        /*font-weight: bold;*/
+        }
+        #sum2 {
+        margin-top: 10px;
+        margin-right: 10px;
+        color:#107afd;
+        text-align: right;
+        }
+        #sum2 p{
+        font-size: 10pt;
+        }
+        #sum2 span{
+        font-size: 15pt;
+        /*font-weight: bold;*/
+        }
+        .form-control{
+        background-color: #e5e5e5;
+        }
+        .btn-default{
+        margin: 2px;
+        border-radius: 5px 5px 5px 5px;
+        }
+        .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default {
+        color: #ffffff;
+        background-color: #107afd;
+        margin: 2px;
+        border-radius: 5px 5px 5px 5px;
+        }
+        .text{
+        font-size: 10pt;
+        color: #666;;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        }
+        .icon-text{
+        font-size: 18pt;
+        color: #ccc;;
+        }
+        #shipway{
+        font-size: 10pt;
+        color: #000000;;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        }
+        #address{
+        font-size: 10pt;
+        color: #000000;;
+        font-weight: bold;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: center;
+        text-align: left;
+        }
+
+        .modal-body {
+        padding: 0px;
+        }
+        .info-box{
+            margin-top: 10px;
+            margin-left: 5px;
+        }
+        .address{
+        font-size: 12px;
+        color: #000000;
+        margin: 0px;
+        }
+        .name .phone{
+        font-size: 14px;
+        color: #000000;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="container ">
+            <div class="row">
+                <center><div class="describe-text">名片预览</div></center>
+                <div class="container-preview col-xs-12">
+                    <div class="card-preview">
+                       
+                    </div>
+                    <div class="card-preview">
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="row" onclick="javascript:location.href = 'shipAddress.html';">
+                <div class="container-address " >
+                    <span class="width-10 pull-left icon-text icon-address icon-button2" style="margin-top: 15px ;color:#000000;padding-left:10px;"></span>
+                    <div class="width-60 pull-left info-box" id="addressArea">
+                    </div>
+                    <div class="width-20 pull-right btn block-btn ">
+                        <center><a href="shipAddress.html" ><span class="icon-to_right icon-button2 icon-text" id="addressIcon"></span></a></center>
+                    </div>
+                </div>
+            </div>
+        <div class="row">
+            <div class="container-material ">
+                材质：300g铜版纸双面覆膜
+            </div>
+        </div>
+        <div class="row" >
+            <div class="container-number ">
+                <div class="width-25 pull-left">
+                    <div class="text">制作数量：</div>
+                </div>
+                <div class="width-65 pull-right right-padding" data-toggle="buttons">
+                    <label class="btn width-30 pull-right btn-default">
+                        <input type="radio" name="options" id="option3" value= "90" autocomplete="off">1000张
+                    </label>
+                    <label class="btn width-30 pull-right btn-default">
+                        <input type="radio" name="options" id="option2" value= "50" autocomplete="off">500张
+                    </label>
+                    <label class="btn width-30 pull-right btn-default active">
+                        <input type="radio" name="options" id="option1" value= "23" autocomplete="off" checked>200张
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="container-ship">
+                <a href="shipway.html"><label id="OnShipWayBtn" class="btn btn-block "  style="text-align: left;">
+                    <div >
+                        <div class=" width-30 pull-left text" >配送方式:</div>
+                        <span class="width-10 pull-right text icon-to_right icon-button2" style="font-size: 12pt;margin-top:10px;"></span>
+                    <div class=" width-30 pull-right" id="shipway">普通快递6元</div >
+                </div>
+            </label>
+        </a>
+    </div>
+</div>
+<div class="row" >
+    <div class="container-message col-xs-12" >
+        <textarea id="message" class="form-control" rows="1" placeholder="给卖家留言："></textarea>
+    </div>
+    <div class="col-xs-12 width-50 pull-right right-padding" >
+        <p id="sum">合计:<span></span></p>
+    </div>
+</div>
+<div class="content-bottom">
+<center class="width-30 pull-right block-btn-primary">
+<a href="">确定</a>
+</center>
+<center class="width-50 pull-right" id="sum2">
+<p >合计:<span></span></p>
+</center>
+</div>
+</div>
+</div>
+
+<!-- 0.16 -->
+<!-- ↓jQuery和bootstrap的js效果，请保留，顺序不动 -->
+<script src="js/jquery-1.10.2.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+
+        $(function(){
+        if (sessionStorage.address && sessionStorage.name && sessionStorage.phone ) {
+            makeAddressBtn()
+        }
+        else{
+            $("#addressArea").html("<div id='address'>请填写收货地址</div >")
+            $("#addressIcon").attr("class","icon-to_right icon-button2 icon-text")
+        };
+        //检查sessionStorage
+        if (sessionStorage.fee && sessionStorage.shipper) {
+            var fee = sessionStorage.fee;
+            var shipper = sessionStorage.shipper
+        }else{
+            fee = 6;
+            shipper = "普通快递"
+        };
+        //设置初始价格或计算新价格
+            $("#shipway").html(shipper+fee+"元")
+            var total = parseInt($("input[type=radio]:checked").attr("value"))+parseInt(fee)
+            $("#sum span").html(total+"元")
+            $("#sum2 span").html(total+"元")
+            $("input:radio").change(function(){
+            var total = parseInt($("input[type=radio]:checked").attr("value"))+parseInt(fee)
+            $("#sum span").html(total+"元")
+            $("#sum2 span").html(total+"元")
+        });
+        });
+        //生成地址信息
+        function makeAddressBtn () {
+            var name = sessionStorage.name
+            var phone = sessionStorage.phone
+            var address = sessionStorage.address
+            // alert(name+phone+address)
+            $("#addressArea").html("<div class='row col-xs-12'><div id='text' class='width-30 pull-left' >收件人:</div><div id='name1' class='width-30 pull-left'>"+name+"</div><div id='phone1' class='width-40 pull-left'>"+phone+"</div><div id='address1'>"+address+"</div></div>")
+
+        }
+</script>
+</body>
+</html>

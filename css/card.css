@@ -1,0 +1,306 @@
+   .nav-custom {
+    }
+    /*替换默认按钮样式*/
+    .btn{
+    font-size: 18px;
+    }
+    .btn-default{
+    border: 0px;
+    background-color: #ffffff
+    }
+    .btn-default.active{
+    border: 0px;
+    background-color: #ffffff
+    }
+    .btn-default a{
+    color: #999;
+    }
+    .container-info{
+    height: 20px;
+    }
+    .container-nav{
+    height: 38px;
+    font-size: 15px;
+    }
+    .container-card{
+    background-color:#E5E5E5;
+    padding-bottom: 10px;
+    }
+    .alert{
+      padding-top:2px;
+    padding-right: 30px;
+    margin-bottom: 2px;
+    padding-left: 40px;
+      font-size:12px;
+    }
+    .card-style{
+	height:170px;
+	min-width:290px;
+	max-width:310px;
+    background-color: #ffffff;
+    padding-right: 7px;
+    padding-left:6px;
+	padding-top:5px;
+    margin-right: 0px;
+    margin-bottom: 5px;
+    box-shadow: 1px 1px 1px #999;
+
+  }
+
+  .card2-area{
+    width:262px;
+    height:58px;
+    /*background-color: #ee3;*/
+    margin:18px 14px 20px 24px;
+  }
+
+  .card2-logoicon{
+    width:120px;
+    height:55px;
+    /*background-color: #f00;*/
+
+  }
+  
+  .card2-content0{
+    width:200px;
+    height:55px;
+    margin:0;
+    position:relative;
+  }
+
+   .card2-content{
+   /* width:200px;
+    height:146px;*/
+    width:300px;
+    /*margin-right:-24px;*/
+    margin:0;
+    padding:7px  2px 5px 24px ;
+    background-color: #33a1d3;
+    position:absolute;
+    bottom:20px;
+    color:white;
+  }
+
+  .fashion-center{
+    width:300px;
+    text-align: center;
+    padding-top: 52px
+  }
+
+
+ .underline1{
+height:1px;
+margin-top:3px;
+margin-bottom:5px;
+}
+.underline2{
+height:1px;
+margin-top:5px;
+margin-bottom:25px;
+}
+.card1-logo{
+padding-left:9px;
+}
+.card2-logo{
+padding-left:10px;
+padding-top:30px;
+}
+.card3-logo{
+padding-right:20px;
+}
+.card-biaoti{
+font-size:18px;
+font-weight:bold;
+}
+.biaoti1{
+padding:0;
+
+}
+.biaoti2{
+margin-top:20px;
+margin-bottom:5px;
+}
+.biaoti3{
+margin-top:0px;
+margin-bottom:5px;
+}
+.biaoti4{
+margin-top:0px;
+margin-bottom:5px;
+}
+/*.fubiaoti1{
+margin-bottom:20px;
+}*/
+.fubiaoti2{
+margin-bottom:10px;
+}
+.fubiaoti3{
+margin-bottom:30px;
+}
+.fubiaoti4{
+margin-bottom:30px;
+}
+.fubiaoti5{
+margin-bottom:15px;
+}
+.fubiaoti6{
+margin-bottom:15px;
+}
+.fubiaoti7{
+margin-bottom:25px;
+}
+.fubiaoti8{
+margin-bottom:40px;
+}
+.card-fubiaoti{
+font-size: 15px;
+margin-bottom: 5px;
+}
+.card-info {
+font-size:12px;
+line-height:1.2em;
+}
+.card-info7{
+font-size:12px;
+line-height:0.5em;
+color:#ffffff;
+}
+.card-info8{
+font-size:12px;
+line-height:0.5em;
+color:#ffffff;
+}
+.tishi{
+font-size:8px;
+color:#999;
+-webkit-transform: scale(0.5);
+}
+.jianju{
+padding-right:5px;
+}
+.xiaduiqi{
+margin-top:10px;
+}
+.card7-sekuai{
+padding-top:5px;
+margin-left:-6px;
+padding-left:6px;
+padding-bottom:4px;
+}
+.card-info7{
+color:#ffffff;
+}
+.card8-sekuai{
+padding-top:5px;
+margin-left:-6px;
+padding-left:6px;
+padding-bottom:5px;
+margin-top:2px;
+}
+.erweima{
+transform: scale(1.2);
+-ms-transform: scale(1.2);	/* IE 9 */
+-webkit-transform: scale(1.2);	/* Safari 和 Chrome */
+-o-transform: scale(1.2);	/* Opera */
+-moz-transform: scale(1.2);
+	/* Firefox */
+}
+.lidianjuli{
+margin-top:10px;
+}
+.erweimalogo{
+transform: scale(0.5);
+-ms-transform: scale(0.5);	/* IE 9 */
+-webkit-transform: scale(0.5);	/* Safari 和 Chrome */
+-o-transform: scale(0.5);	/* Opera */
+-moz-transform: scale(0.5);	/* Firefox */
+}
+.background-yanse{
+background-color:#33A1D3;
+}
+.yanse{
+color:#33A1D3;
+}
+.logojianju{
+margin-bottom:12px;
+}
+
+.icontop2{
+    float:left;
+    margin-left:5px;
+}
+
+.center1
+{
+position:absolute;
+left:110px;
+top:50px;
+text-align:center;
+width:80px;
+height:60px;
+padding-left:10px;
+padding-right:10px;
+background-color:#ffffff;
+}
+.center2
+{
+position:absolute;
+left:110px;
+top:50px;
+text-align:center;
+width:80px;
+height:60px;
+}
+.center3
+{
+position:absolute;
+left:110px;
+top:50px;
+text-align:center;
+width:80px;
+height:60px;
+}
+.dise1{
+margin-top:55px;
+height:30px;
+}
+.dise2{
+height:2px;
+margin-top:5px;
+}
+.dise3{
+margin-top:54px;
+height:73px;
+}
+ .form-control {
+	border: none;
+	font-size:12px;
+	text-align:center;
+	height:20px;
+	
+}
+.xiajianju{
+margin-bottom:2px;
+}
+    .btn-block{
+      width:98%;
+      text-align: left;
+    }
+    .btn{
+      text-align: left;
+      border-radius: 0px;
+    }
+    .btn:active{
+      box-shadow: 1px 0px rgba(0,0,0,.125);
+    }
+
+.container {
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+        padding-left:0;
+        padding-right: 0;
+        position: absolute;
+        top: 0px;
+        bottom: 0px; 
+        }

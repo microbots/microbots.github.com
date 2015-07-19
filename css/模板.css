@@ -1,0 +1,82 @@
+/*    div {
+      border: 1px solid #ddd;
+    }*/
+
+/*    body {
+      padding-top: 36px;+
+      
+  }*/
+  .nav-custom {
+
+  }
+  /*替换默认按钮样式*/
+  .btn{
+    font-size: 18px;
+  }
+  .btn-default{
+    border: 0px;
+    background-color: #ffffff
+
+  }
+  .btn-default.active{
+    border: 0px;
+    background-color: #ffffff
+
+  }
+  .btn-default a{
+    color: #999;
+  }
+
+  .container-info{
+    height: 20px;
+
+  }
+  .container-nav{
+    height: 38px;
+    font-size: 15px;
+
+  }
+
+  .container-text{
+    margin-left:13px;
+  }
+  .container-card{
+    background-color:#E5E5E5;
+    padding-bottom: 10px;
+  }
+  .alert{
+	padding-top:2px;
+    padding-right: 30px;
+    margin-bottom: 2px;
+    padding-left: 40px;
+	font-size:16px;
+  }
+  .card-style{
+
+    background-color: #ffffff;
+	max-width:150;
+    margin-top: 5px;
+    margin-right: 6px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    box-shadow: 1px 1px 1px #999;
+  }
+
+#tab{ margin:0px;}
+#tab .active{border-bottom: 4px solid #107afd;}
+#title{ height:36px; line-height:36px; overflow:hidden; color:#999;}
+#title li{ float:left; width:25%; text-align:center; display:block; background:#eee; cursor:pointer;}
+#title .active{ background:white; color:#107afd; }
+#tabcont{ width:100%; border:1px solid #ccc; height:100%;}
+
+
+
+.container{
+    padding-left:0;
+    padding-right: 0;
+    position: absolute;
+  	top: 0px;
+  	bottom: 0px;
+    width:100%;
+}
+

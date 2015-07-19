@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- ↓ 这些设置不要动 -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- ↓ 标题 -->
+        <title>编辑模板</title>
+        <!-- ↓ 默认引用bootstrap、icomoon字体以及default样式 -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icomoon.css">
+        <link rel="stylesheet" type="text/css" href="css/default.css">
+        <!-- ↓ 自定义css，名称最好和html相同 -->
+        <link rel="stylesheet" type="text/css" href="css/jasny-bootstrap.min.css">
+        <style>
+        .contact-item-basic {
+        min-height: 53px;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        padding-top: 7px;
+        }
+        .contact-item-basic:last-child {
+        margin-bottom: 26px;
+        }
+        .item-tag {
+        font-size: 13px;
+        color: #107afd;
+        margin-bottom: 1px;
+        }
+        .item-value {
+        font-size: 14px;
+        margin-bottom: 3px;
+        }
+        .icon-group {
+        padding-top: 7px;
+        }
+        .icon-button, .icon-button:active, .icon-button:focus, .icon-button:hover {
+        color: #107afd;
+        font-size: 26px;
+        text-decoration: none;
+        }
+        .icon-button:first-child {
+        margin-left: 15px;
+        }
+
+        .block-btn {
+        border-right: 1px solid #ddd;
+        height: 100%;
+        display: inline-block;
+        background-color: #fff;
+        }
+        .block-btn a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #ccc;
+        padding: 10px;
+        font-size: 10px;
+        }
+        .icon-button2 {
+        color: #393535;
+        font-size: 24px;
+        }
+        .container-front{
+        background-color:#E5E5E5;
+        }
+        .container-back{
+        background-color:#E5E5E5;
+        }
+        .container-color{
+        height: 70px;
+        border: 1px solid #ddd;
+        width: 100%;
+        position: absolute;
+        bottom: 60px;
+        max-width: 768px;
+        }
+        .describe-text{
+       /* background-color:#E5E5E5;*/
+        padding:15px  0 2px 28px;
+        color:#666;
+        }
+        .card-style{
+        background-color: #ffffff;
+        padding-right: 7px;
+        padding-left:12px;
+        margin-right: 0px;
+        margin-bottom: 0px;
+        margin-left: 8px;
+        box-shadow: 1px 1px 1px #999;
+        }
+        .modal-content{
+        width:261px;
+        height: 163px;
+        }
+        #note{
+        font-size: 16pt;
+        margin-top: 30px;
+        padding-top: 20px;
+        height: 113px;
+        }
+        .btn-block{
+        height: 50px;
+        border-radius: 0px 0px 0px 0px;
+        }
+        .btn-right{
+            border-radius: 0px 0px 6px 0px;
+        }
+        .btn-left{
+            border-radius: 0px 0px 0px 6px;
+        }
+
+        /*.container{
+           
+        }*/
+
+        .container {
+        width: 100%;
+        max-width: 768px;
+        margin: 0 auto;
+        padding-left:0;
+        padding-right: 0;
+        position: absolute;
+        top: 0px;
+        bottom: 0px; 
+        background-color: #e5e5e5;
+        }
+
+        #mask{
+            background:#000;
+            opacity:0.5;
+            position: absolute;
+            top: 200px;
+            left: 54.5px;
+            right: 54.5px;
+            filter:alpha(opacity=50);
+            height: 115px;
+            width:211px;
+            display:none;
+            color: #ffffff;
+            font-size:16px;
+            border-radius: 5px 5px 5px 5px; }
+            #masktext{
+                position: absolute;
+                top: 20%;
+                display: block;
+                height: 100%;
+                margin-right:20px;
+                margin-left:20px;
+                padding-left: 20px;
+                padding-right: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container ">
+                <div class="describe-text">正面</div>
+                    <div class="card-size">
+                     </div>
+                <div class="describe-text">反面</div>
+                <div class="card-size ">
+                </div>
+                <center>
+    <div id="mask">
+      <p id="masktext">已保存，可在“我”->“我的名片中查看”</p>
+    </div>
+</center>
+            <div class="content-bottom top-border">
+                <center class="width-20 pull-left block-btn">
+                <a href="edit.html"><span class="icon-edit icon-button2"></span></a>
+                </center>
+                <center class="width-20 pull-left block-btn" data-toggle="modal" data-target="#mymodal">
+                <a href="#"><span class="icon-download icon-button2"></span></a>
+                </center>
+                <center class="width-30 pull-left block-btn-default" onclick=
+                'OnSaveBtn()'>
+                <a>仅保存</a>
+                </center>
+                <center class="width-30 pull-left block-btn-primary">
+                <a href="makeOrder.html">立即制作</a>
+                </center>
+            </div>
+        </div>
+        <center>
+            <div class="modal fade" id="mymodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+                            <center><p id="note">付费1元下载pdf</br>可直接用于名片制作</p></center>
+                            <div class="width-50 pull-right">
+                                <button class="btn btn-default btn-block btn-right" data-dismiss="modal">取消</button>
+                            </div>
+                            <div class="width-50 pull-left">
+                                <button class="btn btn-default btn-block btn-left">确定</button>
+                            </div>
+                        </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+        </center>
+
+
+
+
+        <!-- ↓jQuery和bootstrap的js效果，请保留，顺序不动 -->
+        <script src="js/jquery-1.10.2.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jasny-bootstrap.min.js"></script>
+        <script type="text/javascript">
+
+        function OnSaveBtn (argument) {
+            var b = (document.body.clientWidth-211)/2
+            $("#mask").css("left",b)
+            $("#mask").css("left",b)
+            $("#mask").show()
+            setTimeout(function () {
+                $("#mask").hide();
+            }, 1000);
+        }
+        </script>
+    </body>
+</html>

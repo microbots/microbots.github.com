@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- ↓ 这些设置不要动 -->
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- ↓ 标题 -->
+        <title>填写收货地址</title>
+        <!-- ↓ 默认引用bootstrap、icomoon字体以及default样式 -->
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/icomoon.css">
+        <link rel="stylesheet" type="text/css" href="css/default.css">
+        <!-- ↓ 自定义css，名称最好和html相同 -->
+        <link rel="stylesheet" type="text/css" href="css/模板.css">
+        <style>
+        .form-control{
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+        font-size: 15px;
+        padding:0px;
+        }
+        .form-control:focus{
+        border-color: #ccc;
+        outline: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        padding:0px;
+        }
+        .content-bottom {
+        height: 48px;
+        width: 100%;
+        margin: 50px -15px 0px;
+        position: absolute;
+        bottom: 200px;
+        max-width: 240px;
+        z-index: 1;
+
+        }
+        .content{
+        border-bottom: 1px solid #ccc;
+        height: 44px;
+
+
+        }
+        .content label{
+        margin-top: 12px;
+        margin-bottom:10px;
+        font-size: 14px;
+        color: #666;
+        text-align: center;
+        }
+        .content input{
+        line-height: 44px;
+        font-size: 16px;
+        }
+        #helpBlock{
+        font-size: 12pt;
+        color: #ff633d;
+        margin-bottom: 25px;
+        }
+        .block-btn-primary{
+            margin-top: 140px;
+            width: 240px;
+            height: 44px;
+            border-radius: 5px 5px 5px 5px;
+        }
+        label.error {
+        background:  0px 0px;
+        padding-top: 2px;
+        font-weight: bold;
+        color: #ff633d;
+        }
+        p{
+            margin:0px 0px 0px 0px;
+        }
+        .container-error{
+            z-index: 2;
+            position: absolute;
+            top: 132px;
+        }
+
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row ">
+            <form id="addressForm">
+                <div class="content col-xs-12">
+                    <label for="name" class="control-label width-30 pull-left" value="收货人"  id="label-name">收货人 :</label>
+                    <input type="text" class="form-control width-70 pull-right" id="name" name="name" >
+                </div>
+                <div class="content col-xs-12">
+                    <label for="phone" class="control-label width-30 pull-left " value="联系方式"  id="label-phone">联系方式 :</label>
+                    <input type="text" class="form-control width-70 pull-right" id="phone" name="phone" >
+                </div>
+                <div class="content col-xs-12">
+                    <label for="address" class="control-label width-30 pull-left" value="收货地址" id="label-address">收货地址 :</label>
+                    <input type="text" class="form-control width-70 pull-right" id="address" name="address" >
+                </div>
+            </form>
+            <div id="container-error" class="container-error col-xs-12">
+
+            </div>
+                <center>
+                    <div class="block-btn-primary" id="submit-btn">
+                        <a href="file:///E:/20150613%E4%BB%A3%E7%A0%81%E5%92%8C%E6%A8%A1%E6%9D%BF/html/shipAddress.html">确认并使用</a>
+                    </div>
+                </center>
+
+            </div>
+
+
+        </div>
+        <!-- ↓jQuery和bootstrap的js效果，请保留，顺序不动 -->
+        <script src="js/jquery-1.10.2.js"></script>
+        <script src="js/jquery.validate.min.js" type="text/javascript"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+            $().ready(function() {
+             $("#addressForm").validate({
+                rules: {
+                       name: "required",
+                       phone: "required",
+                       address:"required"
+                   },
+                wrapper: "p",
+                errorLabelContainer:$("#container-error"),
+                messages:{
+                        name: "注：请填写收件人",
+                        phone: "注：请填写联系方式",
+                        address:"注：请填写收货地址"
+                }
+                });
+            });
+            $().ready(function() {
+                if (sessionStorage.from =="0") {
+                     $("input[name='name']").val(sessionStorage.name)
+                     $("input[name='phone']").val(sessionStorage.phone)
+                     $("input[name='address']").val(sessionStorage.address)
+                };
+
+            });
+            //TODO：表单信息应该发送到服务器，存入数据库。页面跳转后在新的页面中，加载从服务器获取的全部地址信息。
+            $("#submit-btn").bind("click", function() {
+                if ($("#addressForm").valid()){
+                    ////code here
+                }
+                else{
+                    return false
+                }
+
+            })
+
+        </script>
+    </body>
+</html>
