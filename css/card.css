@@ -60,7 +60,7 @@
     /*background-color: #f00;*/
 
   }
-  
+
   .card2-content0{
     width:200px;
     height:55px;
@@ -218,6 +218,7 @@ transform: scale(0.5);
 .background-yanse{
 background-color:#33A1D3;
 }
+
 .yanse{
 color:#33A1D3;
 }
@@ -228,6 +229,7 @@ margin-bottom:12px;
 .icontop2{
     float:left;
     margin-left:5px;
+    width: 53px;
 }
 
 .center1
@@ -277,7 +279,7 @@ height:73px;
 	font-size:12px;
 	text-align:center;
 	height:20px;
-	
+
 }
 .xiajianju{
 margin-bottom:2px;
@@ -302,5 +304,5 @@ margin-bottom:2px;
         padding-right: 0;
         position: absolute;
         top: 0px;
-        bottom: 0px; 
+        bottom: 0px;
         }
