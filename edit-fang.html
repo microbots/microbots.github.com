@@ -8,13 +8,17 @@
     <!-- ↓ 标题 -->
     <title>编辑模板</title>
     <!-- ↓ 默认引用bootstrap、icomoon字体以及default样式 -->
-    <link rel="stylesheet" type="text/css" href={{url_for('static',filename="css/bootstrap.min.css")}}>
-  <link rel="stylesheet" type="text/css" href={{url_for('static',filename="css/default.css")}}>
-  <link rel="stylesheet" type="text/css" href={{url_for('static',filename="css/card.css")}}>
-  <link rel="stylesheet" type="text/css" href={{url_for('static',filename="css/icomoon.css")}}>
-  <link rel="stylesheet" type="text/css" href={{url_for('static',filename="css/edit.css")}}>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <link rel="stylesheet" type="text/css" href="css/card.css">
+  <link rel="stylesheet" type="text/css" href="css/icomoon.css">
+  <link rel="stylesheet" type="text/css" href="css/edit.css">
     <!-- ↓ 自定义css，名称最好和html相同 -->
-
+<style type="text/css">
+	.logo{
+		width: 55px;
+	}
+</style>
   </head>
   <body>
     <div class="container ">
@@ -25,20 +29,21 @@
               <!--  -->
               <div class = "card1-area">
               	<div class="card1-logoicon ">
-                	<div class="icontop"><img src={{url_for('static',filename="images/head.png")}}></div>
+                	<div class="icontop"><img src="images/shadow.png"></div>
                		 <div class="underline1 background-yanse "></div>
                 	<div class ="iconbottom"><img src="images/二维码1.png"></div>
                 	<!-- <img class="pull-left" src="images/扫一扫.jpg"> -->
               	</div>
               	<div class="card1-content0">
               	<div class="card1-content ">
-                	<div class="card-biaoti biaoti1">姓名</div>
-                	<div name="position" class="card-fubiaoti fubiaoti1">公司 职位</div>
+                	<div class="card-biaoti biaoti1">杨宝玲</div>
+                	<div name="position" class="card-fubiaoti fubiaoti1">东南大学 学生</div>
                 	<ul class="card-info list-unstyled">
                   	<li><span class="icon-phone_paper yanse"></span> 152-1234-5678<li>
-					<li><span class="icon-mail_paper yanse"></span> 123456789@qq.com</li>
-					<li><span class="icon-link_paper yanse"></span> http://www.123.com</li>
-					<li><span class="icon-address_paper yanse"></span> xx省xx市xx区xx路xx号</li>
+                  	<li><span class="icon-phone_paper yanse"></span> 6656123<li>
+					<li><span class="icon-mail_paper yanse"></span> yang.bl@qq.com</li>
+					<li><span class="icon-link_paper yanse"></span> http://oriental13.lofter.com</li>
+					<li><span class="icon-address_paper yanse"></span> 上海</li>
                 	</ul>
             	</div>
             	</div>
@@ -48,158 +53,40 @@
 			<div name="group" id="card2" value="2" onclick="location.href='electronic_edit.html';">
 				<div class = "card2-area">
                  	<div class="card2-logoicon pull-right">
-                		<div class="icontop2"><img src="images/input logo.png"></div>
+                		<div class="icontop2"><img class="logo" src="images/logo.png"></div>
                		<!--  <div class="underline1 "></div> -->
                 		<div class="icontop2"><img src="images/二维码1.png"></div>
                 	<!-- <img class="pull-left" src="images/扫一扫.jpg"> -->
               		</div>
 			   		<div class="card2-content0">
-              			<div class="card-biaoti biaoti1 pull-top">姓名</div>
-                		<div name="position" class="card-fubiaoti fubiaoti1">公司 职位</div>
+              			<div class="card-biaoti biaoti1 pull-top">杨宝玲</div>
+                		<div name="position" class="card-fubiaoti fubiaoti1">东南大学 学生</div>
             		</div>
 				</div>
 				<div class="card2-content background-yanse">
 			   		<ul class="card-info list-unstyled">
 					<li><span class="icon-phone_paper white"></span> 152-1234-5678<li>
-					<li><span class="icon-mail_paper white"></span> 123456789@qq.com</li>
-					<li><span class="icon-link_paper white"></span> http://www.123.com</li>
-					<li><span class="icon-address_paper white"></span> xx省xx市xx区xx路xx号</li>
+					<li><span class="icon-phone_paper white"></span> 6656123<li>
+					<li><span class="icon-mail_paper white"></span> yang.bl@qq.com  </li>
+					<li><span class="icon-link_paper white"></span> http://oriental13.lofter.com</li>
+					<li><span class="icon-address_paper white"></span> 上海</li>
 					</ul>
 			   </div>
             </div>
-<!-- 			   <div name="group" id="card3" value="3" onclick="location.href='electronic_edit.html';">
-			   <div class="width-100">
-               <div class="card2-content width-50 pull-left">
-			   <h2 class="card-biaoti biaoti3">姓名</h2>
-			   <p class="card-fubiaoti fubiaoti3">公司 职位</p>
-			   </div>
-			   <div class="card2-content width-50 pull-left">
-			    <img class="pull-right " src="images/二维码1.png">
-			   <img class="pull-right jianju " src="images/input logo.png">
-			   <img class="pull-right" src="images/扫一扫.jpg">
-			   </div>
-			   </div>
-			   <div class="pull-left width-100">
-			    <ul class="card-info list-unstyled">
-				<li><span class="icon-phone_paper yanse"></span> 152-1234-5678</li>
-				<li><span class="icon-mail_paper yanse"></span> 123456789@qq.com</li>
-				<li><span class="icon-link_paper yanse"></span> http://www.123.com</li>
-				<li><span class="icon-address_paper yanse"></span> xx省xx市xx区xx路xx号</li>
-				</ul>
-			   </div>
-			   </div>
-			   <div name="group" id="card4" value="4" onclick="location.href='electronic_edit.html';">
-               <div class="card2-content width-60 pull-left">
-			   <h2 class="card-biaoti biaoti4">姓名</h2>
-			   <p class="card-fubiaoti fubiaoti4">公司 职位</p>
-			   <ul class="card-info list-unstyled">
-				<li><span class="icon-phone_paper yanse"></span> 152-1234-5678<li>
-				<li><span class="icon-mail_paper yanse"></span> 123456789@qq.com</li>
-				<li><span class="icon-link_paper yanse"></span> http://www.123.com</li>
-				<li><span class="icon-address_paper yanse"></span> xx省xx市xx区xx路xx号</li>
-				</ul>
-			   </div>
-			   <div class="card3-logo width-40 pull-right">
-			   <img class="pull-right" src="images/二维码1.png">
-			   <img class="pull-right" src="images/扫一扫.jpg">
-			   <img class="pull-right xiaduiqi" src="images/input logo.png">
-			   </div>
-               </div>
-			   <div name="group" id="card5" value="5" onclick="location.href='electronic_edit.html';">
-			   <div class="width-100">
-               <div class="card2-content width-50 pull-left">
-			   <h2 class="card-biaoti biaoti3">姓名</h2>
-			   <p class="card-fubiaoti fubiaoti5">公司 职位</p>
-			   <div class="underline2 width-80 background-yanse"></div>
-			   </div>
-			   <div class="card2-content width-50 pull-left">
-			    <img class="pull-right " src="images/二维码1.png">
-			   <img class="pull-right jianju " src="images/input logo.png">
-			   <img class="pull-right" src="images/扫一扫.jpg">
-			   </div>
-			   </div>
-			   <div class="pull-left width-100">
-			    <ul class="card-info list-unstyled">
-				<li><span class="icon-phone_paper yanse"></span> 152-1234-5678</li>
-				<li><span class="icon-mail_paper yanse"></span> 123456789@qq.com</li>
-				<li><span class="icon-link_paper yanse"></span> http://www.123.com</li>
-				<li><span class="icon-address_paper yanse"></span> xx省xx市xx区xx路xx号</li>
-				</ul>
-			   </div>
-			   </div>
-			   <div name="group" id="card6" value="6" onclick="location.href='electronic_edit.html';">
-               <div class="card2-content width-60 pull-left">
-			   <h2 class="card-biaoti biaoti4">姓名</h2>
-			   <p class="card-fubiaoti fubiaoti6">公司 职位</p>
-			   <div class="width-70 underline2 background-yanse"></div>
-			   <ul class="card-info list-unstyled">
-				<li><span class="icon-phone_paper yanse"></span> 152-1234-5678<li>
-				<li><span class="icon-mail_paper yanse"></span> 123456789@qq.com</li>
-				<li><span class="icon-link_paper yanse"></span> http://www.123.com</li>
-				<li><span class="icon-address_paper yanse"></span> xx省xx市xx区xx路xx号</li>
-				</ul>
-			   </div>
-			   <div class="card3-logo width-40 pull-right">
-			   <img class="pull-right" src="images/二维码1.png">
-			   <img class="pull-right" src="images/扫一扫.jpg">
-			   <img class="pull-right xiaduiqi" src="images/input logo.png">
-			   </div>
-               </div>
-			   <div name="group" id="card7" value="7" onclick="location.href='electronic_edit.html';">
-               <div class="card2-content width-60 pull-left">
-			   <h2 class="card-biaoti biaoti4">姓名</h2>
-			   <p class="card-fubiaoti fubiaoti4">公司 职位</p>
-			   <div class="card7-sekuai background-yanse">
-			   <ul class="card-info7 list-unstyled">
-				<li><span class="icon-phone_paper "></span> 152-1234-5678<li>
-				<li><span class="icon-mail_paper "></span> 123456789@qq.com</li>
-				<li><span class="icon-link_paper "></span> http://www.123.com</li>
-				<li><span class="icon-address_paper"></span> xx省xx市xx区xx路xx号</li>
-				</ul>
-				</div>
-			   </div>
-			   <div class="card3-logo width-40 pull-right">
-			   <img class="pull-right logojianju" src="images/input logo.png">
-			   <img class="pull-right" src="images/二维码1.png">
-			   <img class="pull-right" src="images/扫一扫.jpg">
-			   </div>
-               </div>
-			   <div  name="group" id="card8" value="8" onclick="location.href='electronic_edit.html';">
-			   <div class="width-100">
-               <div class="card2-content width-50 pull-left">
-			   <h2 class="card-biaoti biaoti3">姓名</h2>
-			   <p class="card-fubiaoti fubiaoti3">公司 职位</p>
-			   </div>
-			   <div class="card2-content width-50 pull-right">
-			    <img class="pull-right " src="images/二维码1.png">
-			   <img class="pull-right jianju " src="images/input logo.png">
-			   <img class="pull-right" src="images/扫一扫.jpg">
-			   </div>
-			   </div>
-			   <div class="pull-left width-100 card8-sekuai background-yanse">
-			    <ul class="card-info8 list-unstyled">
-				<li><span class="icon-phone_paper "></span> 152-1234-5678</li>
-				<li><span class="icon-mail_paper "></span> 123456789@qq.com</li>
-				<li><span class="icon-link_paper "></span> http://www.123.com</li>
-				<li><span class="icon-address_paper "></span> xx省xx市xx区xx路xx号</li>
-				</ul>
-			   </div>
-			   </div> -->
 		</div>
-        <!-- </div> -->
-
+       
           <div class="describe-text">反面 (点击背面切换样式，点击logo编辑logo)</div>
         	<div class="container-back ">
              <div class="dingwei" id="back1">
                    <div class="banner-color background-yanse center">
-				   <div ><a href="cardback.html"><img class="" src="images/input logo.png"></a></div>
+				   <div ><a href="cardback.html"><img class="logo" src="images/logo.png"></a></div>
       				<div ><img src="images/选填2.png"></div>
 				   </div>
 
             </div>
 			<div  class="dingwei" id="back2">
                    <div class="back2-bg  background-yanse back2-center">
-				   <div><a href="cardback.html"><img src="images/input logo.png"></a></div>
+				   <div><a href="cardback.html"><img class="logo" src="images/logo.png"></a></div>
 			       <div><img src="images/选填2.png"></div>
 				   </div>
             </div>
@@ -209,7 +96,7 @@
 				<div class = "back3-bg1 background-yanse"></div>
 				</div>
                    <div class=" back2-center back3-logo ">
-				   <div><a href="cardback.html"><img src="images/input logo.png"></a></div>
+				   <div><a href="cardback.html"><img  class="logo" src="images/logo.png"></a></div>
 			       <div><img src="images/选填1.png"></div>
 				   </div>
 				   <!-- <div class="dise3 background-yanse"></div> -->
