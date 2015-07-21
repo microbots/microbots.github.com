@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- ↓ 这些设置不要动 -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- ↓ 标题 -->
+    <title>编辑分组</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/default.css">
+    <link rel="stylesheet" type="text/css" href="css/icomoon.css">
+    <!-- <link rel="stylesheet" type="text/css" href="css/模板.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/jasny-bootstrap.min.css">
+<style>
+.group_row{
+  width:100%;
+  height: 45px;
+  border-bottom: 1px solid #eee
+}
+.lable {
+  padding-top: 10px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+  vertical-align: middle;
+  font-size: 18px;
+}
+.icon{
+  padding-top: 10px;
+  padding-right: 15px;
+  padding-bottom: 10px;
+  vertical-align: middle;
+  font-size: 18px;
+  color: #CC0033 ;
+}
+p{
+  margin-bottom: 0px;
+}
+.gray{
+  height: 15px;
+  background-color: #eee;
+}
+.newgroup{
+  border-bottom: 1px solid #eee;
+}
+.modal-header {
+  border-bottom: 0px solid #e5e5e5;
+}
+.modal-header {
+  min-height: 10px;
+  padding: 15px;
+}
+.form-control{
+  border-radius: 0px;
+}
+.btn-right{
+            border-radius: 0px 0px 6px 0px;
+            border: 1px solid #eee;
+            display: block;
+            text-align: center;
+            width: 100%;
+}
+.btn-left{
+    border-radius: 0px 0px 0px 6px;
+    border: 1px solid #eee;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+.btnrow{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+
+}
+.modal-content{
+        width:261px;
+        height: 163px;
+        }
+</style>
+  </head>
+  <body>
+    <div class="container ">
+      <div class="row" id="groups">
+
+      </div>
+      <div class="row gray">
+
+      </div>
+      <div class="row newgroup" data-toggle="modal" data-target=".bs-example-modal-sm">
+        <p class="lable" >添加新分组</p>
+      </div>
+    </div>
+
+
+
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+      <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+        <div class="modal-header">
+                <h4 class="modal-title" >新建分组</h4>
+        </div>
+      <div class="modal-body row">
+       <form >
+          <input type="newgroup" class="form-control" placeholder="分组名">
+        </form>
+
+      </div>
+      <div class="btnrow">
+                <div class="width-50 pull-right ">
+                                    <button class="btn btn-default btn-right" data-dismiss="modal">取消</button>
+                </div>
+                <div class="width-50 pull-left ">
+                                    <button class="btn btn-default btn-left" data-dismiss="modal" onclick="finish(this)">确定</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- ↓jQuery和bootstrap的js效果，请保留，顺序不动 -->
+    <script src="js/jquery-1.10.2.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+    <script type= "text/javascript">
+      $SCRIPT_ROOT = {{ request.script_root|tojson|safe }};
+    </script>
+    <script type="text/javascript">
+    $(function(){
+      makegroup("重要")
+      makegroup("亲友")
+      makegroup("客户")
+      makegroup("外卖")
+      
+    })
+    function makegroup (groupname) {
+    	var div="<div class='group_row' onclick=''><p class='width-90 pull-left lable'>"+groupname+"</p><span id='del-btn' class='width-10 pull-right icon icon-delete '></span></div>"
+            $("#groups").append(div)
+    }
+    $(".container").on("click","span[id='del-btn']",function(){
+          var p = $(this).parents(".group_row");
+          p.remove();
+          // update();
+    });
+
+    
+
+    
+    </script>
+  </body>
+</html>
