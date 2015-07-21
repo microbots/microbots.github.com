@@ -134,6 +134,9 @@ p{
       makegroup("外卖")
       
     })
+    function finish(){
+      makegroup($("input[type=newgroup]").val())
+    }
     function makegroup (groupname) {
     	var div="<div class='group_row' onclick=''><p class='width-90 pull-left lable'>"+groupname+"</p><span id='del-btn' class='width-10 pull-right icon icon-delete '></span></div>"
             $("#groups").append(div)
