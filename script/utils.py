@@ -18,7 +18,7 @@ def gen_ecard(vstr,path):
         #   ERROR_CORRECT_H: 大约30%或更少的错误能被纠正
         error_correction=qrcode.constants.ERROR_CORRECT_L,
         # 控制二维码中每个小格子包含的像素数
-        box_size=4,
+        box_size=2,
         # 控制边框(二维码与图片边界的距离)包含的格子数(默认为4,是相关标准规定的最小值)
         border=3,
     )
@@ -41,6 +41,7 @@ def change_color(rgb_value,path):
     image = im.convert('RGB')
     pixs = image.load()
     (row,col) = image.size
+    print rgb_value
     for x in range(0,row):
         for y in range(0,col):
             if pixs[x,y] == (0,0,0):
@@ -72,8 +73,7 @@ def get_ecard_path(name,phone,tel,email,address,url,position,rgb_value):
     vstr = begin + ename + etel  + ephone + eemail + eaddress + eurl + etitle +end
    
     current_path= os.getcwd()
-    path =  current_path+"/test.png"
-  
+    path =  current_path+ "/test.png"  
     gen_ecard(vstr,path)
     change_color(rgb_value,path)
     return path
@@ -86,6 +86,6 @@ if __name__ == "__main__":
     address = "上海"
     url = "http://oriental13.lofter.com"
     position = "东南大学学生"
-    rgb_value = (255,153,18)
-
+    #rgb_list = [(1,1,1),(46,111,188),(48,161,212),(10,158,80),(229,137,5),(249,97,21),(140,19,27)]
+    rgb_value = (140,19,27)
     get_ecard_path(name,tel,phone,email,address,url,position,rgb_value)
