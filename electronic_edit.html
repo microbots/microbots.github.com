@@ -47,7 +47,7 @@
           <div class="portrait-positioner">
             <div id="headpic" class="fileinput fileinput-new" data-provides="fileinput">
             <div  class="fileinput-preview btn-file" type="file" data-trigger="fileinput" style="width: 80px; height: 80px;">
-              <img id="image" src="images/head.png" class="img-circle" />
+              <img id="image" src="images/ybl1.png" class="img-circle" />
             </div>
             <div>
               <span style="display:none; " class="btn btn-default btn-file"><span class="fileinput-new"></span><span class="fileinput-exists"></span><input type="file" ></span>
@@ -56,9 +56,9 @@
           </div>
         </div>
         <div class="width-70 pull-left" id="basic-info">
-          <input type="text" class="form-control" id="inputDefault" placeholder="姓名">
-          <input type="text" class="form-control" id="inputDefault" placeholder="公司">
-          <input type="text" class="form-control" id="inputDefault" placeholder="职位">
+          <input type="text" class="form-control" id="inputDefault" value='杨宝玲'placeholder="姓名">
+          <input type="text" class="form-control" id="inputDefault" value='东南大学' placeholder="公司">
+          <input type="text" class="form-control" id="inputDefault" value='学生'  placeholder="职位">
         </div>
       </div>
       <!-- form-end-1 -->
@@ -72,9 +72,23 @@
               <div class="pull-right"><span class="icon-to_right"></span></div>
             </button>
           </div>
-          <input type="text" class="form-control" placeholder="电话">
+          <input type="text" class="form-control" placeholder="电话" value='6656123' >
         </div>
       </div>
+      
+      <div class="form-group form-group-collapse" id="basic-contact" name="phone">
+        <div class="input-group width-100">
+          <div class="input-group-btn width-30">
+            <button type="button" id="add-btn" class="btn btn-none btn-icon col-xs-4"><span class="icon-add_1"></span></button>
+            <button type="button" name="title-btn" class="btn btn-none dropdown-toggle btn-right col-xs-8" data-toggle="modal" data-target="#phoneModal">
+              <div class="pull-left"><span>手机</span></div>
+              <div class="pull-right"><span class="icon-to_right"></span></div>
+            </button>
+          </div>
+          <input type="text" class="form-control" placeholder="邮箱" value='15212345678'>
+        </div>
+      </div>
+
       <div class="form-group form-group-collapse" id="basic-contact" name="email">
         <div class="input-group width-100">
           <div class="input-group-btn width-30">
@@ -84,9 +98,10 @@
               <div class="pull-right"><span class="icon-to_right"></span></div>
             </button>
           </div>
-          <input type="text" class="form-control" placeholder="邮箱">
+          <input type="text" class="form-control" placeholder="邮箱" value='yang.bl@qq.com'>
         </div>
       </div>
+
       <div class="form-group form-group-collapse" id="basic-contact">
         <div class="input-group width-100">
           <div class="input-group-btn width-30">
@@ -108,7 +123,7 @@
               <div class="pull-right"><span class="icon-to_right"></span></div>
             </button>
           </div>
-          <input type="text" class="form-control" placeholder="URL">
+          <input type="text" class="form-control" placeholder="URL" value='http://oriental13.lofter.com'>
         </div>
       </div>
       <div class="form-group form-group-collapse" id="basic-contact" name="address">
@@ -120,7 +135,7 @@
               <div class="pull-right"><span class="icon-to_right"></span></div>
             </button>
           </div>
-          <input type="text" class="form-control" placeholder="地址">
+          <input type="text" class="form-control" placeholder="地址" value='上海'>
         </div>
       </div>
       <div class="form-group form-group-collapse form-end-2" id="basic-contact">
@@ -132,7 +147,7 @@
               <div class="pull-right"><span class="icon-to_right"></span></div>
             </button>
           </div>
-          <input type="text" class="form-control" placeholder="社交账号">
+          <input type="text" class="form-control" placeholder="社交账号" value="abao">
         </div>
       </div>
 
@@ -141,17 +156,24 @@
       <!-- 用于标记个人简介的位置 -->
       <div id="introAnchor"></div>
       <!-- form-end-2 -->
-      <div id="selfIntro" class="form-group form-end-3">
+      <!-- <div id="selfIntro" class="form-group form-end-3">
         <div class="input-group width-100">
           <div class="input-group-btn">
-            <button type="button"  class="btn btn-none btn-icon width-10"></button>
+            <button type="button" class="btn btn-none btn-icon width-10"></button>
             <button type="button" id="intro" class="btn btn-none btn-right width-90" onclick="addIntro(this)">
               <div class="pull-left"><span>个人简介</span></div>
               <div class="pull-right"><span class="icon-to_right long-space-right"></span></div>
             </button>
           </div>
         </div>
+      </div> -->
+      <div class='contact-item-basic clo-xs-12' data-toggle='modal' data-target='#myModal-intro'>
+        <div class='width-100'>
+          <p class='item-tag'>个人简介</p>
+          <p class='item-value'  style='word-break:break-all;'>热爱互联网的设计师</p>
+        </div>
       </div>
+
 
       <div id="customAnchor"></div>
       <!-- form-end-3 -->
@@ -173,7 +195,7 @@
         <div class="fileinput fileinput-new" data-provides="fileinput">
             <div  class="fileinput-preview btn-file" type="file" data-trigger="fileinput" style="width: 127px; height: 127px;">
 
-              <img id="image" src="images/placeholder.png" />
+              <img id="image" src="images/logo.png" />
             </div>
             <div>
               <span style="display:none; " class="btn btn-default btn-file"><span class="fileinput-new"></span><span class="fileinput-exists"></span><input type="file" ></span>
@@ -307,7 +329,7 @@
           <input type="text" class="form-control" value="个人简介" >
         </div>
         <div class="modal-body modal-body-collapse">
-          <textarea class="form-control" rows="7" placeholder="输入内容"></textarea>
+          <textarea class="form-control" rows="7" placeholder="输入内容"  text="sdfafwf"></textarea>
         </div>
         <div class="modal-footer">
           <center>
@@ -364,9 +386,9 @@
   <script src="js/jasny-bootstrap.min.js"></script>
   <script type="text/javascript">
 
-       $(function(){
-          fillForm()
-       });
+       // $(function(){
+       //    fillForm()
+       // });
        //监听头像上传，修改为圆角图片
        $("#headpic").bind("change.bs.fileinput",function(){
           $("#headpic").find("img:first").attr("class","img-circle")
