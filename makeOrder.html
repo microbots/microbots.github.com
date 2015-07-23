@@ -183,6 +183,44 @@
         font-size: 14px;
         color: #000000;
         }
+        .btn-right{
+            border-radius: 0px 0px 6px 0px;
+            border: 1px solid #eee;
+            display: block;
+            text-align: center;
+            width: 100%;
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+
+        }
+        .btn-left{
+            border-radius: 0px 0px 0px 6px;
+            border: 1px solid #eee;
+            display: block;
+            width: 100%;
+            text-align: center;
+            color: #333;
+            background-color: #fff;
+            border-color: #ccc;
+
+        }
+        .btnrow{
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+
+        }
+
+        .modal-content{
+        width:261px;
+        height: 163px;
+        }
+        #note{
+        font-size: 16pt;
+        margin-top: 30px;
+        }
+
         </style>
     </head>
     <body>
@@ -252,8 +290,9 @@
     </div>
 </div>
 <div class="content-bottom">
-<center class="width-30 pull-right block-btn-primary">
-<a href="">确定</a>
+<center class="width-30 pull-right block-btn-primary" data-toggle="modal" data-target="#mymodal">
+
+<a >确定</a>
 </center>
 <center class="width-50 pull-right" id="sum2">
 <p >合计:<span></span></p>
@@ -261,6 +300,29 @@
 </div>
 </div>
 </div>
+
+
+
+<div class="modal fade" id="mymodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+        <center><p id="note">微信支付,等待接入</p></center>
+        
+        
+        <div class="btnrow">
+                <div class="width-50 pull-right ">
+                                    <button class="btn  btn-right" data-dismiss="modal">取消</button>
+                </div>
+                <div class="width-50 pull-right ">
+                                    <button class="btn  btn-left" data-dismiss="modal">确定</button>
+                </div>
+        </div>
+ 
+
+     </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
 <!-- 0.16 -->
 <!-- ↓jQuery和bootstrap的js效果，请保留，顺序不动 -->
