@@ -51,9 +51,11 @@
     .color-block{
         height: 50px;
         width:14.28%;
+        border:none;
     }
     #black-color{
         background-color: #010101;
+        border:none;
     }
     #blue-color{
         background-color: #2E6FBC;
@@ -100,7 +102,7 @@
     .describe-text{
         background-color:#E5E5E5;
         /*font-weight: bold;*/
-        padding:15px  0 2px 28px;
+        padding:10px  0 2px 28px;
       /*  padding-top: 15px;*/
         color:#666;
     }
@@ -208,7 +210,7 @@
 }
 
 .card1-content0{
-    width:170px;
+    width:180px;
     height:142px;
     position:relative;
     /*background-color: #0ff;*/

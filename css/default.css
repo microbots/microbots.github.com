@@ -68,6 +68,13 @@ a, a:active, a:focus, a:hover {
 	clear: both;
 }
 
+.bottom-shipA{
+    position:absolute;
+    bottom:3px;
+    margin:auto;
+    width:90%;
+}
+
 .card-preview{
     width:150px;
     height:90px;
@@ -75,6 +82,7 @@ a, a:active, a:focus, a:hover {
     float:left;
     box-shadow: 1px 1px 1px #999;
     margin-left:8px;
+    margin-top:5px;
 }
 .card-size{
     width:300px; 
