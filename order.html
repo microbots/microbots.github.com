@@ -1,0 +1,229 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- ↓ 这些设置不要动 -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <!-- ↓ 标题 -->
+  <title>我的订单</title>
+  <!-- ↓ 默认引用bootstrap、icomoon字体以及default样式 -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/icomoon.css">
+  <link rel="stylesheet" type="text/css" href="css/default.css">
+  <!-- ↓ 自定义css，名称最好和html相同 -->
+  <!-- <link rel="stylesheet" type="text/css" href="css/模板.css"> -->
+
+<script src="http://lib.sinaapp.com/js/jquery/1.4.2/jquery.min.js" type="text/javascript"></script>
+
+<style>
+*{ margin:0; padding:0; font-family:Microsoft YaHei; font-size:16px;}
+ul,li{ list-style:none; margin:0;}
+#tab{ margin:0px; color:#777; }
+#title{ height:40px; line-height:40px; overflow:hidden;border-bottom: 1px solid #ccc;}
+#title li{ float:left; width:25%; text-align:center; display:block; background:#f5f5f5; cursor:pointer;}
+#title .active{ background:#107afd; color:#fff;}
+#tabcont{ width:100%;height:100%; background-color: #eee;color:#000;}
+.templates{float:left;margin:10px 0px 0px 8px;width:150px;height:90px;border:1px solid #eee; box-shadow: 1px 1px 2px #999;}
+.container{
+    padding-left:0;
+    padding-right: 0;
+    position: absolute;
+    width:100%;
+    top: 0px;
+    bottom: 0px;
+    background-color: #efefef;
+}
+
+.order{
+  margin-top: 5px;
+  width:100%;
+  height:90px;
+  background-color: white;
+  
+  border-top:1px solid #ccc;
+}
+
+.order-title-block{
+  padding:5px 10px 3px 10px;
+  /*background-color: #f00;*/
+  width: 100%;
+  height: 22px;
+ }
+.order-line{
+  width:90%;
+  height:1px;
+  color:#ccc;
+}
+.order-title{
+  font-size: 12px;
+  color:#999;
+  float:left;
+ }
+
+.order-title2{
+  font-size: 12px;
+  color:#f45;
+  float:right;
+
+}
+
+.order-none-text{
+  font-size:18px;
+  text-align: center;
+  padding-top: 90px;
+  color:#666;
+}
+
+.card-preview-1{
+  width:100%;
+  height:80px;
+  padding:1px 10px 3px 10px;
+  background-color: #f2f2f2;
+  /*float:left;*/
+}
+
+.card-preview-order{
+  width:100px;
+  height:60px;
+  /*padding:6px 6px 6px 0;*/
+  float:left;
+  box-shadow:0.5px 0.5px 3px #999;
+  margin-right: 10px;
+  margin-top:8px;
+}
+
+.card-delete-block{
+  width:100%;
+  height:50px;
+  background-color:white;
+  border-bottom:1px solid #ccc;
+}
+
+.card-preview-text{
+  padding-top: 15px;
+  font-family: 14px;
+  color:#444;
+  margin-left:230px;
+}
+
+.card-delete-btn{
+  width:90px;
+  text-align: center;
+  padding:4px 5px 4px 5px;
+  border:1px solid #ccc;
+  margin:8px 8px 3px 0;
+  border-radius:5px;
+  float:right;
+}
+
+</style>
+<script>
+function tab(Nav,Num){
+      if(Nav.className=="active")return;
+      var thisNav=Nav.parentNode.id;
+      var navName=Nav.nodeName.toLowerCase();
+      var navList=document.getElementById(thisNav).getElementsByTagName(navName);
+      for(var i=0;i<navList.length;i++){
+              if(i==Num){
+                      Nav.className="active";
+                      document.getElementById("cont"+i).style.display="block";
+              }else{
+                      navList[i].className="";
+                      document.getElementById("cont"+i).style.display="none";
+              }
+      }
+}
+</script>
+
+  <style>
+/*    body {
+      padding-top: 36px;
+  }*/
+  .body{
+    background-color: #E5E5E5;
+  }
+  .container-qr{
+   /* padding-left:*/ 
+    background-color:#000;
+  }
+  .container-info{
+    height: 20px;
+
+  }
+  .container-nav{
+    height: 38px;
+    font-size: 15px;
+
+  }
+ 
+
+</style>
+</head>
+
+<body>
+  <div class="container">
+  <div id="tab">
+          <ul id="title">
+                   <li onclick="tab(this,0)" class="active">全部</li>
+                   <li onclick="tab(this,1)">待付款</li>
+                   <li onclick="tab(this,2)">待发货</li>
+                   <li onclick="tab(this,3)">待收货</li>
+          </ul>
+          <div id="tabcont">
+           <!--  <div id="cont0"> -->
+            <div id="cont0" >
+              <div class="order">
+                  
+                  <div class="order-title-block">
+                    <div class="order-title">2015/7/24</div>
+                    <div class="order-title2">交易成功</div>
+                  </div>
+
+                  <div class="order-line"></div>
+                  
+                  <div class="card-preview-1">
+                    <div class="card-preview-order">
+                    <img style="width:150px height:90px" src="images/preview-front.png">
+                    </div>
+                    <div class="card-preview-order">
+                    <img style="width:150px height:90px" src="images/preview-back.png">
+                    </div> 
+                    <div class="card-preview-text"><div>200张</div><div>26元</div></div>
+                  </div>
+                  <div class="card-delete-block"><div class="card-delete-btn">删除订单</div></div>                
+              </div>               
+            </div>
+
+            
+        <!--   </div> -->
+            <div id="cont1" style="display:none;">
+                <div class="order-none-text">您还没有待付款的订单</div>
+            </div>
+            <div id="cont2" style="display:none;">
+                <div class="order-none-text">您还没有待发货的订单</div> 
+            </div>
+            <div id="cont3" style="display:none;">
+                <div class="order-none-text">您还没有待收货订单</div>
+            </div>
+          </div>
+</div>
+<!-- </div> -->
+
+    </div>
+
+  <!-- ↓jQuery和bootstrap的js效果，请保留，顺序不动 -->
+  <script src="js/jquery-1.10.2.js"></script>
+  <script src="js/bootstrap.min.js"></script>>
+  <script type="text/javascript">
+  //判断哪个卡片被点击，序号存入sessionStorage
+    $("a[name='cardbtn']").bind("click",function(){
+      // alert($(this).attr('value'))
+	  var ss=$(this).attr('value');
+		sessionStorage.cardtype=$(this).attr('value');
+    });
+  </script>
+</body>
+</body>
+</html>

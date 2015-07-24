@@ -81,7 +81,7 @@ a, a:active, a:focus, a:hover {
     background-color: #fff;
     float:left;
     box-shadow: 1px 1px 1px #999;
-    margin-left:8px;
+    margin-left:6px;
     margin-top:5px;
 }
 .card-size{
@@ -129,7 +129,7 @@ textarea {
 	height: 48px;
 	width: 100%;
 	margin:  0px;
-	position: absolute;
+	position: fixed;
 	bottom: 0px;
 	max-width: 768px;
     border-top:1px solid #ccc;
