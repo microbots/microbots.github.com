@@ -4,7 +4,7 @@
     <!-- ↓ 这些设置不要动 -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- ↓ 标题 -->
     <title>编辑模板</title>
     <!-- ↓ 默认引用bootstrap、icomoon字体以及default样式 -->
@@ -139,9 +139,13 @@
                 <center><div class="logotext"><p>东南大学</p></div></center>
 
             </div>
+
+            
+
         </div>
 
-      
+        <div class="bottom-padding"></div>
+
         <div class="container-color">
             <div class="color-block pull-left" id="black-color">
 
@@ -210,7 +214,7 @@
       $(this).css("border","solid 2px #fff");
       var color = $(this).css("background-color");
       $(".background-yanse").css("background-color",color);
-
+      $(".yanse").css("color",color);
     });
  
       $("#lightblue-color").trigger("click");

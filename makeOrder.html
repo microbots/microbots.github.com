@@ -4,7 +4,7 @@
         <!-- ↓ 这些设置不要动 -->
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1,minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <!-- ↓ 标题 -->
         <title>制作名片</title>
         <!-- ↓ 默认引用bootstrap、icomoon字体以及default样式 -->
@@ -36,6 +36,12 @@
         height: 100%;
         color: #ccc;
         font-size: 10px;
+        }
+
+        .bottom-padding{
+            width:100%;
+            height:100px;
+            background-color: transparent;
         }
         .icon-button2 {
         color: #393535;
@@ -232,7 +238,7 @@
                        <img style="width:150px height:90px" src="images/preview-front.png">
                     </div>
                     <div class="card-preview">
-                       <img src="images/preview-back.png">
+                       <img style="width:150px height:90px" src="images/preview-back.png">
                     </div>
                 </div>
             </div>
@@ -288,7 +294,9 @@
     <div class="col-xs-12 width-50 pull-right right-padding" >
         <p id="sum">合计:<span></span></p>
     </div>
+     
 </div>
+<div class="bottom-padding"></div>
 <div class="content-bottom">
 <center class="width-30 pull-right block-btn-primary" data-toggle="modal" data-target="#mymodal">
 

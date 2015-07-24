@@ -33,6 +33,11 @@
     padding-left: 40px;
       font-size:12px;
     }
+    .bottom-padding{
+        width:100%;
+        height:140px;
+        background-color:transparent;
+    }
     .card-style{
 	height:170px;
 	min-width:290px;
