@@ -25,6 +25,7 @@
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
+          box-shadow: 2px 2px 2px #999;
     }
 
     .container-color{
@@ -37,7 +38,6 @@
         background-color: #00f;
         float:left;
         padding-left: 0;
-        z-index:900;
     }
     .block-btn {
     border-right: 1px solid #ddd;
@@ -172,7 +172,6 @@
 	position:fixed;
 	bottom:0;
     border-top:1px solid #ccc;
-    z-index:1000;
 }
 
 .underline1{
