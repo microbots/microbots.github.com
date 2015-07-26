@@ -54,7 +54,7 @@
                 <div class="card1-logoicon ">
                     <div class="icontop"><img name="headpic" src="images/logo.png"></div>
                      <div class="underline1 background-yanse "></div>
-                    <div class ="iconbottom"><img name="qrcode" src="images/二维码1.png")}}></div>
+                    <div class ="iconbottom"><img class="erweima" name="qrcode" src="images/二维码1.png"></div>
                     <!-- <img class="pull-left" src="images/扫一扫.jpg"> -->
                 </div>
                 <div class="card1-content0">
@@ -78,7 +78,7 @@
                     <div class="card2-logoicon pull-right">
                         <div class="icontop2"><img name="headpic" src="images/logo.png"></div>
                     <!--  <div class="underline1 "></div> -->
-                        <div class="icontop2"><img name="qrcode" src="images/二维码1.png")}}></div>
+                        <div class="icontop2"><img  class="erweima" name="qrcode" src="images/二维码1.png"></div>
                     <!-- <img class="pull-left" src="images/扫一扫.jpg"> -->
                     </div>
                     <div class="card2-content0">
@@ -102,24 +102,30 @@
 
           <div class="describe-text">反面(点击背面切换样式，点击logo编辑logo)</div>
             <div class="container-back ">
-             <div class="dingwei" id="back1">
+			<div class="slider">
+		<div class="slide slide-0 active" id="back0" value="1">
+
+			<div class="slide__content">	
                    <div class="banner-color background-yanse center">
-                   <div ><a href="cardback.html"><img class="back-logo" name="logo" src="images/logo.png")}}></a></div>
+                   <div ><a href="cardback.html"><img class="back-logo" name="logo" src="images/logo.png"></a></div>
                    </div>
-                   <div class="logotext"><p>东南大学</p></div>
+                   <div class=" text_color logotext"><p>东南大学</p></div>
+			</div>
+		</div>
+		<div class="slide slide-1 " id="back1" value="2">
 
-            </div>
-            <div  class="dingwei" id="back2">
-
+			<div class="slide__content">
                 <div class="back2-bg  background-yanse back2-center">
                     <div class="col-xm-12 banner">
-                      <center><a href="cardback.html"><img class="back-logo" name="logo" src="images/logo.png")}}></a></center>
+                      <center><a href="cardback.html"><img class="back-logo" name="logo" src="images/logo.png"></a></center>
                    </div>
-                   <div class="logotext"><p>东南大学</p></div>
+                   <div class=" text_color logotext"><p>东南大学</p></div>
                 </div>
-            </div>
+			</div>
+		</div>
+		<div class="slide slide-2" id="back2" value="3">
 
-            <div  class="dingwei" id="back3">
+			<div class="slide__content">
               <div class="col-xm-12 banner">
                 <div class = "pull-left ribbon">
                   <div class = "back3-bg background-yanse"></div>
@@ -137,35 +143,36 @@
 
                 </div>
                 <center><div class="logotext"><p>东南大学</p></div></center>
-
             </div>
 
-            
+		</div>
 
+	</div>
+          
         </div>
 
         <div class="bottom-padding"></div>
 
         <div class="container-color">
-            <div class="color-block pull-left" id="black-color">
+            <div class="color-block pull-left" id="black-color" value="1" >
 
             </div>
-            <div class="color-block pull-left" id="blue-color">
+            <div class="color-block pull-left" id="blue-color"  value="2" >
 
             </div>
-            <div class="color-block pull-left" id="lightblue-color">
+            <div class="color-block pull-left" id="lightblue-color" value="3" >
 
             </div>
-            <div class="color-block pull-left" id="green-color">
+            <div class="color-block pull-left" id="green-color" value="4"  >
 
             </div>
-            <div class="color-block pull-left" id="yellow-color">
+            <div class="color-block pull-left" id="yellow-color" value="5" >
 
             </div>
-            <div class="color-block pull-left" id="orange-color">
+            <div class="color-block pull-left" id="orange-color" value="6" >
 
             </div>
-            <div class="color-block pull-left" id="red-color">
+            <div class="color-block pull-left" id="red-color" value="7" >
 
             </div>
             </div>
@@ -183,6 +190,7 @@
     <!-- ↓jQuery和bootstrap的js效果，请保留，顺序不动 -->
     <script src="js/jquery-1.10.2.js"></script>
     <script src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript">
 
 
@@ -194,6 +202,7 @@
     //构建一条信息
     function setCard(){
     var ss=parseInt(sessionStorage.cardtype);
+	
     switch(ss){
     case 1: $("#card1").css("display","block");break;
     case 2: $("#card2").css("display","block");break;
@@ -205,19 +214,26 @@
     default: $("#card8").css("display","block");
     }
     }
+
     var backindex=3
     $(document).ready(function(){
       setCard();
-
+	
     $(".container-color .color-block").click(function(){
       $(".container-color .color-block").css("border","none");
       $(this).css("border","solid 2px #fff");
       var color = $(this).css("background-color");
+	  var kk = $(this).attr("value");
+		  sessionStorage.colornum=$(this).attr("value");
       $(".background-yanse").css("background-color",color);
       $(".yanse").css("color",color);
+	  $(".text_color").css("color","#fff");
+	  $(".erweima").attr("src","images/qr-code/qr"+kk+".png");
+	  
     });
- 
+	 
       $("#lightblue-color").trigger("click");
+	  });
 
     // $("#black-color").click(function(){
     // $(".background-yanse").css("background-color","#010101");
@@ -249,30 +265,13 @@
     // $(".background-yanse").css("background-color","#8c131b");
     // $(".yanse").css("color","#8c131b");
     // });
-    $("#back3").click(function(){
-    $("#back3").fadeOut(300);
-    $("#back2").find(".logotext").css("color","#fff")
-    backindex--;
-    });
-
-    $("#back2").click(function(){
-    $("#back2").fadeOut(300);
-    $("#back1").find(".logotext").css("color","#fff")
-    backindex--;
-    });
-    $("#back1").click(function(){
-    $("#back3,#back2").fadeIn(300);
-    $("#back3").find(".logotext").css("color","#000")
-    backindex--;
-      if (backindex==0) {backindex=3};
-    });
-    });
+    
     function finish (onj) {
       sessionStorage.cardfront=$(".container-front").html()
-      sessionStorage.cardback=$("#back"+backindex).html()
+      sessionStorage.cardback=$(".active").html()
+	 sessionStorage.backnum=$(".active").attr("value");
       location.href="after_edit.html"
     }
     </script>
-
   </body>
 </html>
