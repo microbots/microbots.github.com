@@ -235,10 +235,10 @@
                 <center><div class="describe-text">名片预览</div></center>
                 <div class="container-preview col-xs-12">
                     <div class="card-preview">
-                       <img style="width:150px height:90px" src="images/preview-front.png">
+                       <img class="preview_front" style="width:150px height:90px" src="images/preview-front.png">
                     </div>
                     <div class="card-preview">
-                       <img style="width:150px height:90px" src="images/preview-back.png">
+                       <img  class="preview_back" style="width:150px height:90px" src="images/preview-back.png">
                     </div>
                 </div>
             </div>
@@ -337,7 +337,13 @@
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
-
+		 $(function(){
+		    var bb=sessionStorage.colornum;
+			var cc=sessionStorage.cardtype;
+			var dd=sessionStorage.backnum;
+            $(".preview_front").attr("src","images/preview/front" + bb + "_" + cc + ".png");
+			$(".preview_back").attr("src","images/preview2/back" + bb + "-" + dd + ".png")
+        });
         $(function(){
         if (sessionStorage.address && sessionStorage.name && sessionStorage.phone ) {
             makeAddressBtn()

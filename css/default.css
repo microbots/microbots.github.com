@@ -133,6 +133,7 @@ textarea {
 	bottom: 0px;
 	max-width: 768px;
     border-top:1px solid #ccc;
+    background-color: white;
 }
 /*底部蓝色按钮*/
 .block-btn-primary {
